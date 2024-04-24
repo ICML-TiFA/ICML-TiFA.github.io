@@ -2,13 +2,13 @@
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
-import Timeline from '~/components/ui/Timeline.astro';
+// import Timeline from '~/components/ui/Timeline.astro';
 import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
-import Timezone from '~/components/widgets/Timezone.astro';
+// import Timezone from '~/components/widgets/Timezone.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import Sponsor from '~/components/widgets/Sponsor.astro';
+// import Sponsor from '~/components/widgets/Sponsor.astro';
 
 const metadata = {
   title: 'Home',
@@ -22,22 +22,22 @@ const metadata = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero2 tagline="ICML 2024 Workshop" actions={[{ variant: 'primary', text: 'Get Started', href: '#Overview' }]}>
-    <Fragment slot="title"> Trustworthy in Multi-modal Foundation Models and AI Agents </Fragment>
+  <Hero2
+    tagline="ICML 2024 Workshop"
+    actions={[{ variant: 'primary', text: 'Get Started', href: 'https://icml.cc/virtual/2024/workshop/29951' }]}
+  >
+    <Fragment slot="title">Trustworthy Multi-modal Foundation Models and AI Agents (TiFA)</Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="font-semibold">corporis</span>consequuntur
-        nihil vitae voluptate</span
-      >
-      Quas natus laborum neque nemo quasi aliquam similique sint, veritatis expedita optio ex , voluptatem consequatur soluta
-      enim!
+      The Forty-first International Conference on Machine Learning @ Messe Wien Exhibition Congress Center, Vienna,
+      Austria
+      <span class="text-slate-300 flex">Sun Jul 21st —— Sat Jul 27th</span>
     </Fragment>
   </Hero2>
 
   <!-- Content Widget **************** -->
 
-  <Content id="Overview">
+  <!-- <Content id="Overview">
     <Fragment slot="title"> Overview </Fragment><Fragment slot="subtitle"
       >Welcome to the ICML 2024 Workshop on Trustworthy in Multi-modal Foundation Models and AI Agents (TiFA)
     </Fragment>
@@ -65,7 +65,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <Content id="Call-For-Papers">
     <Fragment slot="title">Description/Call For Papers</Fragment>
@@ -103,15 +103,24 @@ const metadata = {
         to build trustworthy MFMs and AI Agents.
       </div>
       <div class="mb-4">Example topics include but are not limited to:</div>
-      <li>Robustness, attack and defense, poisoning, hijacking and security</li>
-      <li>Privacy and watermarking</li>
-      <li>Fairness, accountability and governance</li>
-      <li>Truthfulness, factuality and sycophancy</li>
-      <li>Transparency, interpretability and monitoring</li>
-      <li>Scalable oversight and steering</li>
-      <li>Auditing, red-teaming and evaluating trustworthiness</li>
-      <li>Novel challenges with the introduction of new modalities</li>
-      <li>Measures against malicious model steering</li>
+      <ul class="list-outside list-disc">
+        <li>Adversarial robustness, attack and defense, poisoning, hijacking and security [8, 1, 4, 13, 22, 27]</li>
+        <li>Out-of-distribution generalization, robustness to spurious correlations and uncertainty estimation</li>
+        <li>Technical approaches to privacy, fairness, accountability and regulation [6, 18]</li>
+        <li>Truthfulness, factuality, honesty and sycophancy [12, 23]</li>
+        <li>Transparency, interpretability and monitoring [16, 32]</li>
+        <li>Identifiers of AI-generated material, such as watermarking [14, 17]</li>
+        <li>
+          Alignment,<a
+            href="https://www.aisafetybook.com/textbook/3-4"
+            class="hover:underline text-sky-600 font-medium"
+            target="_blank">control and machine ethics</a
+          > [3, 21, 30]
+        </li>
+        <li>Model auditing, red-teaming and safety evaluation [5, 2, 10, 24, 7]</li>
+        <li>Measures against malicious model fine-tuning [11]</li>
+        <li>Novel safety challenges with the introduction of new modalities</li>
+      </ul>
     </Fragment>
   </Content>
 
@@ -126,7 +135,7 @@ const metadata = {
           references. Authors are required to include a "Social Impacts Statement" that highlights "potential broader
           impact of their work, including its ethical aspects and future societal consequences". You must format your
           submission using the <a
-            href="https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf"
+            href="https://media.icml.cc/Conferences/ICML2024/Styles/icml2024.zip"
             class="hover:underline text-sky-600 font-medium"
             target="_blank">ICML_LATEX_style_file</a
           >. Reviews will be double-blind, with at least two reviewers assigned to each paper.
@@ -148,9 +157,8 @@ const metadata = {
   </Content>
   <Content classes={{ container: 'py-2 md:py-2 lg:py-2 pb-12 md:pb-12 lg:pb-12' }}>
     <Fragment slot="subtitle">Key Dates</Fragment>
-
-    <Fragment slot="content">
-      <Timeline
+    <Fragment slot="content" classes={{ container: 'p-0' }}>
+      <!-- <Timeline
         items={[
           { title: 'May 06, 2024', description: 'Submissions Open' },
           { title: 'May 23, 2024', description: 'Submission Deadline' },
@@ -159,7 +167,40 @@ const metadata = {
           { title: 'July 26, 2024', description: 'Workshop Date' },
         ]}
         defaultIcon="tabler:arrow-right"
-      />
+      /> -->
+      <div class="flex justify-center">
+        <table class="bg-white">
+          <tbody>
+            <tr>
+              <td class="w-64 border px-4 py-2">Submissions Open</td>
+              <td class="w-64 border px-4 py-2">May 06, 2024</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Submission Deadline</td>
+              <td class="border px-4 py-2">May 23, 2024</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Acceptance Notification</td>
+              <td class="border px-4 py-2">June 12, 2024</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Camera-Ready Deadline</td>
+              <td class="border px-4 py-2">June 30, 2024</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Workshop Date</td>
+              <td class="border px-4 py-2">July 26, 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="flex py-4">
+        All deadlines are specified in <a
+          href="https://www.timeanddate.com/time/zones/aoe"
+          class="hover:underline text-sky-600 font-medium px-2"
+          target="_blank">AoE</a
+        > (Anywhere on Earth).
+      </div>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -167,7 +208,7 @@ const metadata = {
   </Content>
   <!-- Content Widget **************** -->
 
-  <Content id="Schedule">
+  <!-- <Content id="Schedule">
     <Fragment slot="content">
       <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2 text-center">
         Schedule<br />
@@ -347,11 +388,11 @@ const metadata = {
         ]}
       />
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Brands Widget ****************** -->
 
-  <Brands
+  <!-- <Brands
     id="Speakers"
     title="Speakers"
     images={[
@@ -402,7 +443,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment></Brands
-  >
+  > -->
   <!-- Content Widget **************** -->
 
   <!-- <Content
@@ -504,7 +545,7 @@ const metadata = {
   />
   <!-- Brands Widget ****************** -->
 
-  <Brands
+  <!-- <Brands
     id="Organizers"
     title=""
     classes={{ container: 'lg:py-1 md:py-1' }}
@@ -532,46 +573,11 @@ const metadata = {
         university: 'Meta AI',
         bioLink: 'https://jfchi.github.io/',
       },
-      {
-        src: '/organizer04.png',
-        alt: 'organizer04',
-        name: 'Hang Su',
-        university: 'Tsinghua University',
-        bioLink: 'https://www.suhangss.me/',
-      },
-      {
-        src: '/organizer06.png',
-        alt: 'organizer06',
-        name: 'Jing Shao',
-        university: 'Shanghai AI Laboratory',
-        bioLink: 'https://amandajshao.github.io/',
-      },
-      {
-        src: '/organizer07.png',
-        alt: 'organizer07',
-        name: 'Pavel Izmailov',
-        university: 'OpenAI',
-        bioLink: 'https://izmailovpavel.github.io/',
-      },
-      {
-        src: '/organizer08.png',
-        alt: 'organizer08',
-        name: 'Zhengyi Wang',
-        university: 'Tsinghua University',
-        bioLink: 'https://thuwzy.github.io/',
-      },
-      {
-        src: '/organizer09.png',
-        alt: 'organizer09',
-        name: 'Andy Zou',
-        university: 'Carnegie Mellon University',
-        bioLink: 'https://andyzoujm.github.io/',
-      },
     ]}
-  />
+  /> -->
   <!-- Brands Widget ****************** -->
 
-  <Brands
+  <!-- <Brands
     classes={{ container: 'lg:py-1 md:py-1 lg:pb-20 md:pb-16' }}
     id="Organizers"
     tagline="program committee"
@@ -634,7 +640,7 @@ const metadata = {
         bioLink: 'https://andyzoujm.github.io/',
       },
     ]}
-  />
+  /> -->
 
   <!-- Brands Widget ****************** -->
 
@@ -729,15 +735,118 @@ const metadata = {
   <Content id="References">
     <Fragment slot="title"> References </Fragment>
     <Fragment slot="content">
-      <p>
+      <p class="text-slate-500">
         [1] L. Bailey, E. Ong, S. Russell, and S. Emmons. Image hijacks: Adversarial images can control generative
         models at runtime, 2023.
       </p>
-      <p>
+      <p class="text-slate-500">
         [2] M. Bhatt, S. Chennabasappa, C. Nikolaidis, S. Wan, I. Evtimov, D. Gabi, D. Song, F. Ahmad, C. Aschermann, L.
         Fontana, S. Frolov, R. P. Giri, D. Kapil, Y. Kozyrakis, D. LeBlanc, J. Mi lazzo, A. Straumann, G. Synnaeve, V.
         Vontimitta, S. Whitman, and J. Saxe. Purple llama cyberseceval: A secure coding benchmark for language models,
         2023.
+      </p>
+      <p class="text-slate-500">
+        [3] S. R. Bowman, J. Hyun, E. Perez, E. Chen, C. Pettit, S. Heiner, K. Lukoˇsi ̄ut ̇e, A. Askell, A. Jones, A.
+        Chen, A. Goldie, A. Mirhoseini, C. McKinnon, C. Olah, D. Amodei, D. Amodei, D. Drain, D. Li, E. Tran-Johnson, J.
+        Kernion, J. Kerr, J. Mueller, J. Ladish, J. Landau, K. Ndousse, L. Lovitt, N. Elhage, N. Schiefer, N. Joseph, N.
+        Mercado, N. DasSarma, R. Larson, S. McCandlish, S. Kundu, S. Johnston, S. Kravec, S. E. Showk, S. Fort, T.
+        Telleen-Lawton, T. Brown, T. Henighan, T. Hume, Y. Bai, Z. Hatfield-Dodds, B. Mann, and J. Kaplan. Measuring
+        progress on scalable oversight for large language models, 2022.
+      </p>
+      <p class="text-slate-500">
+        [4] N. Carlini, M. Nasr, C. A. Choquette-Choo, M. Jagielski, I. Gao, A. Awadalla, P. W. Koh, D. Ippolito, K.
+        Lee, F. Tramer, and L. Schmidt. Are aligned neural networks adversarially aligned?, 2023.
+      </p>
+      <p class="text-slate-500">
+        [5] S. Casper, C. Ezell, C. Siegmann, N. Kolt, T. L. Curtis, B. Bucknall, A. Haupt, K. Wei, J. Scheurer, M.
+        Hobbhahn, L. Sharkey, S. Krishna, M. V. Hagen, S. Alberti, A. Chan, Q. Sun, M. Gerovitch, D. Bau, M. Tegmark, D.
+        Krueger, and D. Hadfield-Menell. Black-box access is insufficient for rigorous ai audits, 2024.
+      </p>
+      <p class="text-slate-500">
+        [6] A. Chan, R. Salganik, A. Markelius, C. Pang, N. Rajkumar, D. Krasheninnikov, L. Langosco, Z. He, Y. Duan, M.
+        Carroll, M. Lin, A. Mayhew, K. Collins, M. Molamohammadi, J. Burden, W. Zhao, S. Rismani, K. Voudouris, U.
+        Bhatt, A. Weller, D. Krueger, and T. Maharaj. Harms from increasingly agentic algorithmic systems. In 2023 ACM
+        Conference on Fairness, Accountability, and Transparency, FAccT ’23. ACM, June 2023. doi:
+        10.1145/3593013.3594033. URL http://dx.doi.org/10.1145/3593013.3594033.
+      </p>
+      <p class="text-slate-500">
+        [7] Y. Chang, X. Wang, J. Wang, Y. Wu, L. Yang, K. Zhu, H. Chen, X. Yi, C. Wang, Y. Wang, W. Ye, Y. Zhang, Y.
+        Chang, P. S. Yu, Q. Yang, and X. Xie. A survey on evaluation of large language models, 2023.
+      </p>
+      <p class="text-slate-500">
+        [8] Y. Dong, H. Chen, J. Chen, Z. Fang, X. Yang, Y. Zhang, Y. Tian, H. Su, and J. Zhu. How robust is google’s
+        bard to adversarial image attacks?, 2023.
+      </p>
+      <p class="text-slate-500">
+        [9] T. Eloundou, S. Manning, P. Mishkin, and D. Rock. Gpts are gpts: An early look at the labor market impact
+        potential of large language models, 2023.
+      </p>
+      <p class="text-slate-500">
+        [10] D. Ganguli, L. Lovitt, J. Kernion, A. Askell, Y. Bai, S. Kadavath, B. Mann, E. Perez, N. Schiefer, K.
+        Ndousse, A. Jones, S. Bowman, A. Chen, T. Conerly, N. DasSarma, D. Drain, N. Elhage, S. El-Showk, S. Fort, Z.
+        Hatfield-Dodds, T. Henighan, D. Hernandez, T. Hume, J. Jacobson, S. Johnston, S. Kravec, C. Olsson, S. Ringer,
+        E. Tran-Johnson, D. Amodei, T. Brown, N. Joseph, S. McCandlish, C. Olah, J. Kaplan, and J. Clark. Red teaming
+        language models to reduce harms: Methods, scaling behaviors, and lessons learned, 2022.
+      </p>
+      <p class="text-slate-500">
+        [11] Henderson, P., Mitchell, E., Manning, C., Jurafsky, D., & Finn, C. (2023). Self-destructing models:
+        Increasing the costs of harmful dual uses of foundation models. In Proceedings of the 2023 AAAI/ACM Conference
+        on AI, Ethics, and Society, AIES ’23.
+      </p>
+      <p class="text-slate-500">
+        [12] Huang, Q., Dong, X., Zhang, P., Wang, B., He, C., Wang, J., Lin, D., Zhang, W., & Yu, N. (2023). Opera:
+        Alleviating hallucination in multi-modal large language models via over-trust penalty and
+        retrospection-allocation.
+      </p>
+      <p class="text-slate-500">
+        [13] Jain, N., Schwarzschild, A., Wen, Y., Somepalli, G., Kirchenbauer, J., yeh Chiang, P., ... & Goldstein, T.
+        (2023). Baseline defenses for adversarial attacks against aligned language models.
+      </p>
+      <p class="text-slate-500">
+        [14] Kirchenbauer, J., Geiping, J., Wen, Y., Katz, J., Miers, I., & Goldstein, T. (2023). A watermark for large
+        language models. In Proceedings of the 40th International Conference on Machine Learning.
+      </p>
+      <p class="text-slate-500">[15] Liu, H., Li, C., Wu, Q., & Lee, Y. J. (2023). Visual instruction tuning.</p>
+      <p class="text-slate-500">
+        [16] Meng, K., Bau, D., Andonian, A., & Belinkov, Y. (2022). Locating and editing factual associations in GPT.
+      </p>
+      <p class="text-slate-500">
+        [17] Nasr, M., Carlini, N., Hayase, J., Jagielski, M., Cooper, A. F., Ippolito, D., ... & Lee, K. (2023).
+        Scalable extraction of training data from (production) language models.
+      </p>
+      <p class="text-slate-500">[18] OpenAI. (2023). Practices for governing agentic AI systems.</p>
+      <p class="text-slate-500">[19] OpenAI. (2023). GPT-4 with vision (GPT-4v) system card.</p>
+      <p class="text-slate-500">
+        [20] Qin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y., ... & Sun, M. (2023). ToolIIM: Facilitating large
+        language models to master 16000+ real-world APIs.
+      </p>
+      <p class="text-slate-500">
+        [21] Rafailov, R., Sharma, A., Mitchell, E., Ermon, S., Manning, C. D., & Finn, C. (2023). Direct preference
+        optimization: Your language model is secretly a reward model.
+      </p>
+      <p class="text-slate-500">
+        [22] Robey, A., Wong, E., Hassani, H., & Pappas, G. J. (2023). SmoothLLM: Defending large language models
+        against jailbreaking attacks.
+      </p>
+      <p class="text-slate-500">
+        [23] Sharma, M., Tong, M., Korbak, T., Duvenaud, D., Askell, A., Bowman, S. R., ... & Perez, E. (2023). Towards
+        understanding sycophancy in language models.
+      </p>
+      <p class="text-slate-500">
+        [24] Bai, J., Bai, S., Yang, S., Wang, S., Tan, S., Wang, P., ... & Zhou, J. (2023). Qwen-vl: A frontier large
+        vision-language model with versatile abilities. arXiv preprint arXiv:2308.12966.
+      </p>
+      <p class="text-slate-500">
+        [25] Liu, H., Li, C., Wu, Q., & Lee, Y. J. (2024). Visual instruction tuning. Advances in neural information
+        processing systems, 36.
+      </p>
+      <p class="text-slate-500">
+        [26] Rombach, R., Blattmann, A., Lorenz, D., Esser, P., & Ommer, B. (2022). High-resolution image synthesis with
+        latent diffusion models. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition.
+      </p>
+      <p class="text-slate-500">
+        [27] Ma, X., Wang, Y., Jia, G., Chen, X., Liu, Z., Li, Y. F., ... & Qiao, Y. (2024). Latte: Latent diffusion
+        transformer for video generation. arXiv preprint arXiv:2401.03048.
       </p>
     </Fragment>
   </Content>
@@ -748,23 +857,23 @@ const metadata = {
     title="Frequently Asked Questions"
     items={[
       {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
-        description: 'aliquam officiis nulla consectetur',
+        title: 'Can we submit a paper that will also be submitted to NeurIPS 2024?',
+        description: 'Yes.',
         icon: 'tabler:help-octagon',
       },
       {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
-        description: 'aliquam officiis nulla consectetur',
+        title: 'Can we submit a paper that was accepted at ICLR 2024?',
+        description: 'No. ICML prohibits main conference publication from appearing concurrently at the workshops.',
         icon: 'tabler:help-octagon',
       },
       {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
-        description: 'aliquam officiis nulla consectetur',
+        title: 'Will the reviews be made available to authors?',
+        description: 'Yes.',
         icon: 'tabler:help-octagon',
       },
       {
-        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias laboriosam ',
-        description: 'aliquam officiis nulla consectetur',
+        title: 'I have a question not addressed here, whom should I contact?',
+        description: 'Email organizers at icml-tifa-workshop@googlegroups.com',
         icon: 'tabler:help-octagon',
       },
     ]}
@@ -775,7 +884,7 @@ const metadata = {
   </FAQs>
 
   <!-- Brands Widget ****************** -->
-
+  <!-- 
   <Sponsor
     id="Sponsor"
     tagline="Sponsor"
@@ -819,5 +928,5 @@ const metadata = {
         alt: 'Yahoo',
       },
     ]}
-  />
+  /> -->
 </Layout>
