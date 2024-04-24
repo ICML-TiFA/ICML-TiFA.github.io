@@ -2,7 +2,7 @@
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
-
+import Timeline from '~/components/ui/Timeline.astro';
 import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
@@ -68,15 +68,41 @@ const metadata = {
   </Content>
 
   <Content id="Call-For-Papers">
-    <Fragment slot="title"> Call For Papers </Fragment>
+    <Fragment slot="title">Description/Call For Papers</Fragment>
     <Fragment slot="content"
-      ><div class="mb-2">
-        Our goals are threefold: 1) Highlight novel directions in trustworthy MFM and AI Agent research; 2) Promote
-        interdisciplinary collaboration on trustworthy MFM and AI Agents, for example among i) trustworthy ML research
-        in vision, language, and other modalities; ii) technical and governance communities; 3) Initiate discussions on
-        best practices for responsible training, deployment, transparency, and security of MFM and AI Agents.
+      ><div class="mb-4">
+        Advanced Multi-modal Foundation Models (MFMs) and AI Agents, equipped with diverse modalities [15, 26, 19, 25,
+        29] and an increasing number of available affordances [20, 31] (e.g., tool use, code interpreter, API access,
+        etc.), have the potential to accelerate and amplify their predecessors’ impact on society [9].
       </div>
-      <div class="mb-2">Topics include but are not limited to:</div>
+      <div class="mb-4">
+        MFM includes multi-modal large language models (MLLMs) and multi-modal generative models (MMGMs). <a
+          href="https://arxiv.org/abs/2306.13549"
+          class="hover:underline text-sky-600 font-medium"
+          target="_blank">MLLMs</a
+        > refer to LLM-based models with the ability to receive, reason, and output with information of multiple modalities,
+        including but not limited to text, images, audio, and video. Examples include <a
+          href="https://publications.reka.ai/reka-core-tech-report.pdf"
+          class="hover:underline text-sky-600 font-medium"
+          target="_blank">Reka</a
+        >, QwenVL [24], Llava [25], and so on. MMGMs refer to a class of MFM models that can generate new content across
+        multiple modalities, such as generating images from text descriptions or creating videos from audio and text
+        inputs. Examples include Stable Diffusion [26], Sora, and Latte [27]. AI agents, <a
+          href="https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf"
+          class="hover:underline text-sky-600 font-medium"
+          target="_blank">or systems with higher degree of agenticness</a
+        >, refer to systems that could achieve complex goals in complex environments with limited direct supervision.
+        Understanding and preempting the vulnerabilities of such systems [4] and their induced harms [6] becomes
+        unprecedentedly crucial.
+      </div>
+      <div class="mb-4">
+        Building trustworthy MFMs and AI Agents transcends adversarial robustness of such models, but also emphasizes
+        the importance of proactive risk assessment, mitigation, safeguards, and the establishment of comprehensive
+        safety mechanisms throughout the lifecycle of the systems’ development and deployment [24, 28]. This approach
+        demands a blend of technical and socio-technical strategies, incorporating AI governance and regulatory insights
+        to build trustworthy MFMs and AI Agents.
+      </div>
+      <div class="mb-4">Example topics include but are not limited to:</div>
       <li>Robustness, attack and defense, poisoning, hijacking and security</li>
       <li>Privacy and watermarking</li>
       <li>Fairness, accountability and governance</li>
@@ -89,6 +115,56 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <Content id="Submission-Guide" classes={{ container: 'pb-2 md:pb-2 lg:pb-2' }}>
+    <Fragment slot="title">Submission Guide</Fragment>
+    <Fragment slot="subtitle">Submission Instructions</Fragment>
+    <Fragment slot="content" classes={{ container: 'py-2' }}
+      ><ul class="list-outside list-disc">
+        <li>Submissions should be made on OpenReview.</li>
+        <li>
+          Submissions should be anonymised papers up to 5 pages (appendices can be added to the main PDF); excluding
+          references. Authors are required to include a "Social Impacts Statement" that highlights "potential broader
+          impact of their work, including its ethical aspects and future societal consequences". You must format your
+          submission using the <a
+            href="https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf"
+            class="hover:underline text-sky-600 font-medium"
+            target="_blank">ICML_LATEX_style_file</a
+          >. Reviews will be double-blind, with at least two reviewers assigned to each paper.
+        </li>
+        <li>
+          We welcome various types of papers including scientific papers and position papers. Scientific papers must not
+          have appeared at an archival venue before, however, non-scientific papers that have appeared in archival
+          venues outside main machine learning venues are welcomed for submission.
+        </li>
+        <li>
+          All accepted papers will be available on the workshop website, but no formal workshop proceedings will be
+          published.
+        </li>
+      </ul>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  <Content classes={{ container: 'py-2 md:py-2 lg:py-2 pb-12 md:pb-12 lg:pb-12' }}>
+    <Fragment slot="subtitle">Key Dates</Fragment>
+
+    <Fragment slot="content">
+      <Timeline
+        items={[
+          { title: 'May 06, 2024', description: 'Submissions Open' },
+          { title: 'May 23, 2024', description: 'Submission Deadline' },
+          { title: 'June 12, 2024', description: 'Acceptance Notification' },
+          { title: 'June 30, 2024', description: 'Camera-Ready Deadline' },
+          { title: 'July 26, 2024', description: 'Workshop Date' },
+        ]}
+        defaultIcon="tabler:arrow-right"
+      />
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
   <!-- Content Widget **************** -->
 
   <Content id="Schedule">
@@ -271,9 +347,6 @@ const metadata = {
         ]}
       />
     </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
   </Content>
 
   <!-- Brands Widget ****************** -->
@@ -325,10 +398,14 @@ const metadata = {
         bioLink: 'https://ivanevtimov.eu/',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment></Brands
+  >
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     id="Challenges"
     columns={4}
     items={[
@@ -359,7 +436,7 @@ const metadata = {
     </Fragment><Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
   <!-- Brands Widget ****************** -->
 
   <Brands
