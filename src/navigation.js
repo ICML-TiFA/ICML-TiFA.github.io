@@ -1,4 +1,4 @@
-import { getPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -7,12 +7,8 @@ export const headerData = {
       href: getPermalink('/#Call-For-Papers'),
     },
     {
-      text: 'Schedule',
-      href: getPermalink('/#Schedule'),
-    },
-    {
-      text: 'Speakers',
-      href: getPermalink('/#Speakers'),
+      text: 'Submission Guide',
+      href: getPermalink('/#Submission-Guide'),
     },
     {
       text: 'Organizers',
@@ -33,7 +29,6 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
   ],
 };

@@ -31,7 +31,7 @@ const metadata = {
     <Fragment slot="subtitle">
       The Forty-first International Conference on Machine Learning @ Messe Wien Exhibition Congress Center, Vienna,
       Austria
-      <span class="text-slate-300 flex">Sun Jul 21st —— Sat Jul 27th</span>
+      <span class="text-slate-300 flex">Sun 21 Jul —— Sat 27 Jul</span>
     </Fragment>
   </Hero2>
 
@@ -102,7 +102,7 @@ const metadata = {
         demands a blend of technical and socio-technical strategies, incorporating AI governance and regulatory insights
         to build trustworthy MFMs and AI Agents.
       </div>
-      <div class="mb-4">Example topics include but are not limited to:</div>
+      <div class="mb-4">Topics include but are not limited to:</div>
       <ul class="list-outside list-disc">
         <li>Adversarial robustness, attack and defense, poisoning, hijacking and security [8, 1, 4, 13, 22, 27]</li>
         <li>Out-of-distribution generalization, robustness to spurious correlations and uncertainty estimation</li>
@@ -142,7 +142,7 @@ const metadata = {
         </li>
         <li>
           We welcome various types of papers including scientific papers and position papers. Scientific papers must not
-          have appeared at an archival venue before, however, non-scientific papers that have appeared in archival
+          have appeared at an archival venue before, However, non-scientific papers that have appeared in archival
           venues outside main machine learning venues are welcomed for submission.
         </li>
         <li>
@@ -496,7 +496,7 @@ const metadata = {
         src: '/organizer02.png',
         alt: 'organizer02',
         name: 'Yawen Duan',
-        university: 'University of Cambridge',
+        university: 'Concordia AI',
         bioLink: 'https://scholar.google.com/citations?user=IJQlPvYAAAAJ&hl=en',
       },
       {
@@ -517,7 +517,7 @@ const metadata = {
         src: '/organizer07.png',
         alt: 'organizer07',
         name: 'Pavel Izmailov',
-        university: 'OpenAI',
+        university: 'New York University',
         bioLink: 'https://izmailovpavel.github.io/',
       },
       {
@@ -731,8 +731,39 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment></Brands
   >
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'Can we submit a paper that will also be submitted to NeurIPS 2024?',
+        description: 'Yes.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Can we submit a paper that was accepted at ICLR 2024?',
+        description: 'No. ICML prohibits main conference publication from appearing concurrently at the workshops.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Will the reviews be made available to authors?',
+        description: 'Yes.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'I have a question not addressed here, whom should I contact?',
+        description: 'Email organizers at icml-tifa-workshop@googlegroups.com',
+        icon: 'tabler:help-octagon',
+      },
+    ]}
+  />
+
   <Content id="References">
     <Fragment slot="title"> References </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
     <Fragment slot="content">
       <p class="text-slate-500">
         [1] L. Bailey, E. Ong, S. Russell, and S. Emmons. Image hijacks: Adversarial images can control generative
@@ -849,38 +880,6 @@ const metadata = {
       </p>
     </Fragment>
   </Content>
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        title: 'Can we submit a paper that will also be submitted to NeurIPS 2024?',
-        description: 'Yes.',
-        icon: 'tabler:help-octagon',
-      },
-      {
-        title: 'Can we submit a paper that was accepted at ICLR 2024?',
-        description: 'No. ICML prohibits main conference publication from appearing concurrently at the workshops.',
-        icon: 'tabler:help-octagon',
-      },
-      {
-        title: 'Will the reviews be made available to authors?',
-        description: 'Yes.',
-        icon: 'tabler:help-octagon',
-      },
-      {
-        title: 'I have a question not addressed here, whom should I contact?',
-        description: 'Email organizers at icml-tifa-workshop@googlegroups.com',
-        icon: 'tabler:help-octagon',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
 
   <!-- Brands Widget ****************** -->
   <!-- 
