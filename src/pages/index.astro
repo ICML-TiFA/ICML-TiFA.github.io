@@ -8,6 +8,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 // import Timezone from '~/components/widgets/Timezone.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 // import Sponsor from '~/components/widgets/Sponsor.astro';
 
 const metadata = {
@@ -446,38 +447,45 @@ const metadata = {
   > -->
   <!-- Content Widget **************** -->
 
-  <!-- <Content
-    id="Challenges"
-    columns={4}
-    items={[
-      {
-        title: 'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
-        description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
-      },
-      {
-        title: 'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
-        description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
-      },
-      {
-        title: 'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
-        description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
-      },
-      {
-        title: 'Welcome to the ICML-TiFA 2023 Workshop on End-to-End Autonomous Driving!',
-        description: `This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and four new challenges in the self-driving domain. Each challenge combines new perspectives of multiple components in perception and planning compared to conventional pipelines. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!`,
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2">
-        Challenges<br /><span class="text-2xl">Converting visitors into customers</span>
-      </h3>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dolore atque facilis aliquam corrupti adipisci quam,
-      ex laboriosam perferendis quis, iste soluta minus obcaecati nesciunt fugit debitis, laborum est sapiente.
-    </Fragment><Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
+  <Content id="Challenges" title="Challenges">
+    <Fragment slot="content"
+      ><Testimonials
+        classes={{ container: 'py-0 md:py-0 lg:py-0 ' }}
+        testimonials={[
+          {
+            title: 'Track 1',
+            name: 'OpenLane Topology Challenge',
+            image: {
+              src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              alt: 'Sidney Hansen Image',
+            },
+            link: '/challenges#TRACK1',
+            job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+          },
+          {
+            title: 'Track 2',
+            name: 'OpenLane Topology Challenge',
+            image: {
+              src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              alt: 'Sidney Hansen Image',
+            },
+            link: '/challenges#TRACK2',
+            job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+          },
+          {
+            title: 'Track 3',
+            name: 'OpenLane Topology Challenge',
+            image: {
+              src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              alt: 'Sidney Hansen Image',
+            },
+            link: '/challenges#TRACK3',
+            job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+          },
+        ]}
+      /></Fragment
+    >
+  </Content>
   <!-- Brands Widget ****************** -->
 
   <Brands
@@ -563,7 +571,10 @@ const metadata = {
         bioLink: 'https://scholar.google.com/citations?user=uoCn8c8AAAAJ&hl=en',
       },
     ]}
-  />
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment></Brands
+  >
   <!-- Brands Widget ****************** -->
 
   <!-- <Brands
@@ -727,10 +738,7 @@ const metadata = {
         bioLink: 'https://www.robots.ox.ac.uk/~phst/',
       },
     ]}
-    ><Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment></Brands
-  >
+  />
   <!-- FAQs Widget ******************* -->
 
   <FAQs
@@ -757,13 +765,14 @@ const metadata = {
         icon: 'tabler:help-octagon',
       },
     ]}
-  />
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment></FAQs
+  >
 
   <Content id="References">
     <Fragment slot="title"> References </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+
     <Fragment slot="content">
       <p class="text-slate-500">
         [1] L. Bailey, E. Ong, S. Russell, and S. Emmons. Image hijacks: Adversarial images can control generative
