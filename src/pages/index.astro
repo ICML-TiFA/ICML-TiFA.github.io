@@ -86,9 +86,13 @@ const metadata = {
           href="https://publications.reka.ai/reka-core-tech-report.pdf"
           class="hover:underline text-sky-600 font-medium"
           target="_blank">Reka</a
-        >, QwenVL [24], Llava [25], and so on. MMGMs refer to a class of MFM models that can generate new content across
-        multiple modalities, such as generating images from text descriptions or creating videos from audio and text
-        inputs. Examples include Stable Diffusion [26], Sora, and Latte [27]. AI agents, <a
+        >, QwenVL [24], Llava [25], <a
+          href="https://publications.reka.ai/reka-core-tech-report.pdf"
+          class="hover:underline text-sky-600 font-medium"
+          target="_blank">LAMM</a
+        > [28],and so on. MMGMs refer to a class of MFM models that can generate new content across multiple modalities,
+        such as generating images from text descriptions or creating videos from audio and text inputs. Examples include
+        Stable Diffusion [26], Sora, and Latte [27]. AI agents, <a
           href="https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf"
           class="hover:underline text-sky-600 font-medium"
           target="_blank">or systems with higher degree of agenticness</a
@@ -483,6 +487,10 @@ const metadata = {
             job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
           },
         ]}
+        callToAction={{
+          text: 'See more',
+          href: '/challenges',
+        }}
       /></Fragment
     >
   </Content>
@@ -886,6 +894,11 @@ const metadata = {
       <p class="text-slate-500">
         [27] Ma, X., Wang, Y., Jia, G., Chen, X., Liu, Z., Li, Y. F., ... & Qiao, Y. (2024). Latte: Latent diffusion
         transformer for video generation. arXiv preprint arXiv:2401.03048.
+      </p>
+      <p class="text-slate-500">
+        [28] Yin, Z., Wang, J., Cao, J., Shi, Z., Liu, D., Li, M., Sheng, L., Bai, L., Huang, X., Wang, Z., & others
+        (2023). LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark. arXiv preprint
+        arXiv:2306.06687.
       </p>
     </Fragment>
   </Content>
