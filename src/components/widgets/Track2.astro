@@ -1,11 +1,28 @@
 ---
 import type { Brands as Props } from '~/types';
 import Headline from '~/components/ui/Headline.astro';
+import Button from '../ui/Button.astro';
+import { Icon } from 'astro-icon/components';
 const { title = '', subtitle = '', tagline = '', id } = Astro.props;
 ---
 
 <div class="max-w-7xl mx-auto pt-24" id={id}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
+  <div class="flex gap-8 justify-center">
+    <Button
+      variant="secondary"
+      href={'#'}
+    >
+      <span class="mr-2">{'Github'}</span>
+      <Icon name="tabler:chevron-right" class="w-6 h-6" />
+    </Button><Button
+      variant="secondary"
+      href={'#'}
+    >
+      <span class="mr-2">{'Submission'}</span>
+      <Icon name="tabler:chevron-right" class="w-6 h-6" />
+    </Button>
+  </div>
 
   <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24"></div>
   <h2 class="text-center text-2xl md:text-3xl py-8">Leaderboard</h2>
@@ -47,14 +64,14 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"> CH3 Score</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-200 bg-white" id="track2-table-body"> </tbody>
+              <tbody class="divide-y divide-gray-200 bg-white" id="track1-table-body"> </tbody>
             </table>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div id="track2-pagination" class="my-4 flex justify-center items-center"></div>
+  <div id="track1-pagination" class="my-4 flex justify-center items-center"></div>
   <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
   <p class="text-gray-700">
     Previous benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. nuPlan
@@ -100,7 +117,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
 </div>
 
 <script>
-  const track2Data = [
+  const track1Data = [
     {
       rank: 'Lindsay',
       country: 'Developer',
@@ -233,18 +250,18 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
       ch3Score: '12',
       name: 'asd',
     },
-    // More track2Data...
+    // More track1Data...
   ];
 
   const pageSize = 10;
   let currentPage = 1;
 
-  function padtrack2Data(track2Data) {
-    const remainder = track2Data.length % pageSize;
+  function padtrack1Data(track1Data) {
+    const remainder = track1Data.length % pageSize;
     if (remainder !== 0) {
       const padCount = pageSize - remainder;
       for (let i = 0; i < padCount; i++) {
-        track2Data.push({
+        track1Data.push({
           rank: '',
           country: '',
           institution: '',
@@ -261,12 +278,12 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
 
   function renderTable(page) {
     const startIndex = (page - 1) * pageSize;
-    const endIndex = Math.min(startIndex + pageSize, track2Data.length);
-    const tableBody = document.getElementById('track2-table-body');
+    const endIndex = Math.min(startIndex + pageSize, track1Data.length);
+    const tableBody = document.getElementById('track1-table-body');
     if (!tableBody) return;
     tableBody.innerHTML = '';
     for (let i = startIndex; i < endIndex; i++) {
-      const team = track2Data[i];
+      const team = track1Data[i];
       const row = document.createElement('tr');
       row.innerHTML = `
         <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">${team.name}</td>
@@ -284,8 +301,8 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
   }
 
   function renderPagination() {
-    const totalPages = Math.ceil(track2Data.length / pageSize);
-    const pagination = document.getElementById('track2-pagination');
+    const totalPages = Math.ceil(track1Data.length / pageSize);
+    const pagination = document.getElementById('track1-pagination');
     if (!pagination) return;
     pagination.innerHTML = '';
     for (let i = 1; i <= totalPages; i++) {
@@ -303,7 +320,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
       pagination.appendChild(button);
     }
   }
-  padtrack2Data(track2Data);
+  padtrack1Data(track1Data);
   renderTable(currentPage);
   renderPagination();
 </script>
