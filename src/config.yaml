@@ -11,7 +11,7 @@ metadata:
   title:
     default: ICML-TiFA Workshop
     template: '%s — ICML-TiFA Workshop'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: 'ICML-TiFA WorkShop'
   robots:
     index: true
     follow: true
