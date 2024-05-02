@@ -31,9 +31,10 @@ const metadata = {
     <Fragment slot="title">Trustworthy Multi-modal Foundation Models and AI Agents (TiFA)</Fragment>
 
     <Fragment slot="subtitle">
-      The Forty-first International Conference on Machine Learning @ Messe Wien Exhibition Congress Center, Vienna,
-      Austria
-      <span class="text-slate-300 flex">Sat 27 Jul</span>
+      The Forty-first International Conference on Machine Learning <br /><span class="text-slate-500"
+        >@ Messe Wien Exhibition Congress Center, Vienna
+      </span>
+      <br /><span class="text-slate-300">Sat 27 Jul</span>
     </Fragment>
   </Hero2>
 
@@ -73,9 +74,9 @@ const metadata = {
     <Fragment slot="title">Description/Call For Papers</Fragment>
     <Fragment slot="content"
       ><div class="mb-4">
-        Advanced Multi-modal Foundation Models (MFMs) and AI Agents, equipped with diverse modalities [15, 26, 19, 25,
-        29] and an increasing number of available affordances [20, 31] (e.g., tool use, code interpreter, API access,
-        etc.), have the potential to accelerate and amplify their predecessors’ impact on society [9].
+        Advanced Multi-modal Foundation Models (MFMs) and AI Agents, equipped with diverse modalities [1, 2, 3, 4, 15]
+        and an increasing number of available affordances [5, 6] (e.g., tool use, code interpreter, API access, etc.),
+        have the potential to accelerate and amplify their predecessors’ impact on society [7].
       </div>
       <div class="mb-4">
         MFM includes multi-modal large language models (MLLMs) and multi-modal generative models (MMGMs). <a
@@ -83,48 +84,44 @@ const metadata = {
           class="hover:underline text-sky-600 font-medium"
           target="_blank">MLLMs</a
         > refer to LLM-based models with the ability to receive, reason, and output with information of multiple modalities,
-        including but not limited to text, images, audio, and video. Examples include <a
-          href="https://publications.reka.ai/reka-core-tech-report.pdf"
-          class="hover:underline text-sky-600 font-medium"
-          target="_blank">Reka</a
-        >, QwenVL [24], Llava [25], <a
+        including but not limited to text, images, audio, and video. Examples include Llava [1], Reka [8], QwenVL [9], <a
           href="https://publications.reka.ai/reka-core-tech-report.pdf"
           class="hover:underline text-sky-600 font-medium"
           target="_blank">LAMM</a
-        > [28],and so on. MMGMs refer to a class of MFM models that can generate new content across multiple modalities,
+        > [36],and so on. MMGMs refer to a class of MFM models that can generate new content across multiple modalities,
         such as generating images from text descriptions or creating videos from audio and text inputs. Examples include
-        Stable Diffusion [26], Sora, and Latte [27]. AI agents, <a
+        Stable Diffusion [2], Sora [10], and Latte [11]. AI agents, <a
           href="https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf"
           class="hover:underline text-sky-600 font-medium"
           target="_blank">or systems with higher degree of agenticness</a
-        >, refer to systems that could achieve complex goals in complex environments with limited direct supervision.
-        Understanding and preempting the vulnerabilities of such systems [4] and their induced harms [6] becomes
-        unprecedentedly crucial.
+        >, refer to systems that could achieve complex goals in complex environments with limited direct supervision
+        [12]. Understanding and preempting the vulnerabilities of these systems [13, 35] and their induced harms [14]
+        becomes unprecedentedly crucial.
       </div>
       <div class="mb-4">
         Building trustworthy MFMs and AI Agents transcends adversarial robustness of such models, but also emphasizes
         the importance of proactive risk assessment, mitigation, safeguards, and the establishment of comprehensive
-        safety mechanisms throughout the lifecycle of the systems’ development and deployment [24, 28]. This approach
+        safety mechanisms throughout the lifecycle of the systems’ development and deployment [16, 17]. This approach
         demands a blend of technical and socio-technical strategies, incorporating AI governance and regulatory insights
         to build trustworthy MFMs and AI Agents.
       </div>
       <div class="mb-4">Topics include but are not limited to:</div>
       <ul class="list-outside list-disc">
-        <li>Adversarial robustness, attack and defense, poisoning, hijacking and security [8, 1, 4, 13, 22, 27]</li>
-        <li>Out-of-distribution generalization, robustness to spurious correlations and uncertainty estimation</li>
-        <li>Technical approaches to privacy, fairness, accountability and regulation [6, 18]</li>
-        <li>Truthfulness, factuality, honesty and sycophancy [12, 23]</li>
-        <li>Transparency, interpretability and monitoring [16, 32]</li>
-        <li>Identifiers of AI-generated material, such as watermarking [14, 17]</li>
+        <li>Adversarial attack and defense, poisoning, hijacking and security [18, 13, 19, 20, 21]</li>
+        <li>Robustness to spurious correlations and uncertainty estimation</li>
+        <li>Technical approaches to privacy, fairness, accountability and regulation [12, 22, 28]</li>
+        <li>Truthfulness, factuality, honesty and sycophancy [23, 24]</li>
+        <li>Transparency, interpretability and monitoring [25, 26]</li>
+        <li>Identifiers of AI-generated material, such as watermarking [27]</li>
         <li>
-          Alignment,<a
+          <a
             href="https://www.aisafetybook.com/textbook/3-4"
             class="hover:underline text-sky-600 font-medium"
-            target="_blank">control and machine ethics</a
-          > [3, 21, 30]
+            target="_blank">Technical alignment / control</a
+          > , such as scalable overslight [29], representation control [26] and machine unlearning [30]
         </li>
-        <li>Model auditing, red-teaming and safety evaluation [5, 2, 10, 24, 7]</li>
-        <li>Measures against malicious model fine-tuning [11]</li>
+        <li>Model auditing, red-teaming and safety evaluation benchmarks [31, 32, 33, 16]</li>
+        <li>Measures against malicious model fine-tuning [34]</li>
         <li>Novel safety challenges with the introduction of new modalities</li>
       </ul>
     </Fragment>
@@ -784,155 +781,159 @@ const metadata = {
 
     <Fragment slot="content">
       <p class="text-slate-500">
-        [1] L. Bailey, E. Ong, S. Russell, and S. Emmons. Image hijacks: Adversarial images can control generative
-        models at runtime, 2023.
-      </p>
-      <p class="text-slate-500">
-        [2] M. Bhatt, S. Chennabasappa, C. Nikolaidis, S. Wan, I. Evtimov, D. Gabi, D. Song, F. Ahmad, C. Aschermann, L.
-        Fontana, S. Frolov, R. P. Giri, D. Kapil, Y. Kozyrakis, D. LeBlanc, J. Mi lazzo, A. Straumann, G. Synnaeve, V.
-        Vontimitta, S. Whitman, and J. Saxe. Purple llama cyberseceval: A secure coding benchmark for language models,
-        2023.
-      </p>
-      <p class="text-slate-500">
-        [3] S. R. Bowman, J. Hyun, E. Perez, E. Chen, C. Pettit, S. Heiner, K. Lukoˇsi ̄ut ̇e, A. Askell, A. Jones, A.
-        Chen, A. Goldie, A. Mirhoseini, C. McKinnon, C. Olah, D. Amodei, D. Amodei, D. Drain, D. Li, E. Tran-Johnson, J.
-        Kernion, J. Kerr, J. Mueller, J. Ladish, J. Landau, K. Ndousse, L. Lovitt, N. Elhage, N. Schiefer, N. Joseph, N.
-        Mercado, N. DasSarma, R. Larson, S. McCandlish, S. Kundu, S. Johnston, S. Kravec, S. E. Showk, S. Fort, T.
-        Telleen-Lawton, T. Brown, T. Henighan, T. Hume, Y. Bai, Z. Hatfield-Dodds, B. Mann, and J. Kaplan. Measuring
-        progress on scalable oversight for large language models, 2022.
-      </p>
-      <p class="text-slate-500">
-        [4] N. Carlini, M. Nasr, C. A. Choquette-Choo, M. Jagielski, I. Gao, A. Awadalla, P. W. Koh, D. Ippolito, K.
-        Lee, F. Tramer, and L. Schmidt. Are aligned neural networks adversarially aligned?, 2023.
-      </p>
-      <p class="text-slate-500">
-        [5] S. Casper, C. Ezell, C. Siegmann, N. Kolt, T. L. Curtis, B. Bucknall, A. Haupt, K. Wei, J. Scheurer, M.
-        Hobbhahn, L. Sharkey, S. Krishna, M. V. Hagen, S. Alberti, A. Chan, Q. Sun, M. Gerovitch, D. Bau, M. Tegmark, D.
-        Krueger, and D. Hadfield-Menell. Black-box access is insufficient for rigorous ai audits, 2024.
+        [1] Liu, H., Li, C., Wu, Q., & Lee, Y. J. (2024). Visual instruction tuning. Advances in neural information
+        processing systems, 36.
+      </p><p class="text-slate-500">
+        [2] Rombach, R., Blattmann, A., Lorenz, D., Esser, P., & Ommer, B. (2022). High-resolution image synthesis with
+        latent diffusion models. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition.
+      </p><p class="text-slate-500">[3] OpenAI. (2023). GPT-4 with vision (GPT-4v) system card.</p><p
+        class="text-slate-500"
+      >
+        [4] Z. Yang, L. Li, K. Lin, J. Wang, C.-C. Lin, Z. Liu, and L. Wang. The dawn of lmms: Preliminary explorations
+        with gpt-4v(ision), 2023.
+      </p><p class="text-slate-500">
+        [5] Qin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y., ... & Sun, M. (2023). ToolIIM: Facilitating large
+        language models to master 16000+ real-world APIs.
       </p>
 
       <div>
         <div id="content" class="overflow-hidden max-h-0 transition-max-height duration-700 ease-in-out">
           <p class="text-slate-500">
-            [6] A. Chan, R. Salganik, A. Markelius, C. Pang, N. Rajkumar, D. Krasheninnikov, L. Langosco, Z. He, Y.
+            [6] C. Zhang, Z. Yang, J. Liu, Y. Han, X. Chen, Z. Huang, B. Fu, and G. Yu. Appagent: Multimodal agents as
+            smartphone users, 2023.
+          </p><p class="text-slate-500">
+            [7] T. Eloundou, S. Manning, P. Mishkin, and D. Rock. Gpts are gpts: An early look at the labor market
+            impact potential of large language models, 2023.
+          </p><p class="text-slate-500">
+            [8] Ormazabal, Aitor, et al. "Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models."
+            arXiv preprint arXiv:2404.12387 (2024).
+          </p><p class="text-slate-500">
+            [9] Bai, J., Bai, S., Yang, S., Wang, S., Tan, S., Wang, P., ... & Zhou, J. (2023). Qwen-vl: A frontier
+            large vision-language model with versatile abilities. arXiv preprint arXiv:2308.12966.
+          </p><p class="text-slate-500">[10] Sora: Creating video from text. (n.d.). https://openai.com/sora</p><p
+            class="text-slate-500"
+          >
+            [11] Ma, X., Wang, Y., Jia, G., Chen, X., Liu, Z., Li, Y. F., ... & Qiao, Y. (2024). Latte: Latent diffusion
+            transformer for video generation. arXiv preprint arXiv:2401.03048.
+          </p><p class="text-slate-500">
+            [12] Shavit, Y., Agarwal, S., Brundage, M., Adler, S., O’Keefe, C., Campbell, R., ... & Robinson, D. G.
+            (2023). Practices for Governing Agentic AI Systems. Research Paper, OpenAI, December.
+          </p><p class="text-slate-500">
+            [13] N. Carlini, M. Nasr, C. A. Choquette-Choo, M. Jagielski, I. Gao, A. Awadalla, P. W. Koh, D. Ippolito,
+            K. Lee, F. Tramer, and L. Schmidt. Are aligned neural networks adversarially aligned?, 2023.
+          </p><p class="text-slate-500">
+            [14] A. Chan, R. Salganik, A. Markelius, C. Pang, N. Rajkumar, D. Krasheninnikov, L. Langosco, Z. He, Y.
             Duan, M. Carroll, M. Lin, A. Mayhew, K. Collins, M. Molamohammadi, J. Burden, W. Zhao, S. Rismani, K.
             Voudouris, U. Bhatt, A. Weller, D. Krueger, and T. Maharaj. Harms from increasingly agentic algorithmic
             systems. In 2023 ACM Conference on Fairness, Accountability, and Transparency, FAccT ’23. ACM, June 2023.
             doi: 10.1145/3593013.3594033. URL http://dx.doi.org/10.1145/3593013.3594033.
-          </p>
-          <p class="text-slate-500">
-            [7] Y. Chang, X. Wang, J. Wang, Y. Wu, L. Yang, K. Zhu, H. Chen, X. Yi, C. Wang, Y. Wang, W. Ye, Y. Zhang,
-            Y. Chang, P. S. Yu, Q. Yang, and X. Xie. A survey on evaluation of large language models, 2023.
-          </p>
-          <p class="text-slate-500">
-            [8] Y. Dong, H. Chen, J. Chen, Z. Fang, X. Yang, Y. Zhang, Y. Tian, H. Su, and J. Zhu. How robust is
-            google’s bard to adversarial image attacks?, 2023.
-          </p>
-          <p class="text-slate-500">
-            [9] T. Eloundou, S. Manning, P. Mishkin, and D. Rock. Gpts are gpts: An early look at the labor market
-            impact potential of large language models, 2023.
-          </p>
-          <p class="text-slate-500">
-            [10] D. Ganguli, L. Lovitt, J. Kernion, A. Askell, Y. Bai, S. Kadavath, B. Mann, E. Perez, N. Schiefer, K.
+          </p><p class="text-slate-500">
+            [15] Gemini Team. Gemini: A family of highly capable multimodal models, 2023.
+          </p><p class="text-slate-500">
+            [16] T. Shevlane, S. Farquhar, B. Garfinkel, M. Phuong, J. Whittlestone, J. Leung, D. Kokotajlo, N. Marchal,
+            M. Anderljung, N. Kolt, L. Ho, D. Siddarth, S. Avin, W. Hawkins, B. Kim, I. Gabriel, V. Bolina, J. Clark, Y.
+            Bengio, P. Christiano, and A. Dafoe. Model evaluation for extreme risks, 2023.
+          </p><p class="text-slate-500">
+            [17] L. Weidinger, M. Rauh, N. Marchal, A. Manzini, L. A. Hendricks, J. Mateos-Garcia, S. Bergman, J. Kay,
+            C. Griffin, B. Bariach, I. Gabriel, V. Rieser, and W. Isaac. Sociotechnical safety evaluation of generative
+            ai systems, 2023.
+          </p><p class="text-slate-500">
+            [18] L. Bailey, E. Ong, S. Russell, and S. Emmons. Image hijacks: Adversarial images can control generative
+            models at runtime, 2023.
+          </p><p class="text-slate-500">
+            [19] Jain, N., Schwarzschild, A., Wen, Y., Somepalli, G., Kirchenbauer, J., yeh Chiang, P., ... & Goldstein,
+            T. (2023). Baseline defenses for adversarial attacks against aligned language models.
+          </p><p class="text-slate-500">
+            [20] Robey, A., Wong, E., Hassani, H., & Pappas, G. J. (2023). SmoothLLM: Defending large language models
+            against jailbreaking attacks.
+          </p><p class="text-slate-500">
+            [21] B. Wang, W. Chen, H. Pei, C. Xie, M. Kang, C. Zhang, C. Xu, Z. Xiong, R. Dutta, R. Schaeffer, et al.
+            Decodingtrust: A comprehensive assessment of trustworthiness in gpt models. 2023.
+          </p><p class="text-slate-500">
+            [22] Chan, A., Ezell, C., Kaufmann, M., Wei, K., Hammond, L., Bradley, H., ... & Anderljung, M. (2024).
+            Visibility into AI Agents. arXiv preprint arXiv:2401.13138.
+          </p><p class="text-slate-500">
+            [23] Huang, Q., Dong, X., Zhang, P., Wang, B., He, C., Wang, J., Lin, D., Zhang, W., & Yu, N. (2023). Opera:
+            Alleviating hallucination in multi-modal large language models via over-trust penalty and
+            retrospection-allocation.
+          </p><p class="text-slate-500">
+            [24] Sharma, M., Tong, M., Korbak, T., Duvenaud, D., Askell, A., Bowman, S. R., ... & Perez, E. (2023).
+            Towards understanding sycophancy in language models.
+          </p><p class="text-slate-500">
+            [25] Meng, K., Bau, D., Andonian, A., & Belinkov, Y. (2022). Locating and editing factual associations in
+            GPT.
+          </p><p class="text-slate-500">
+            [26] A. Zou, L. Phan, S. Chen, J. Campbell, P. Guo, R. Ren, A. Pan, X. Yin, M. Mazeika, A.-K. Dombrowski, S.
+            Goel, N. Li, M. J. Byun, Z. Wang, A. Mallen, S. Basart, S. Koyejo, D. Song, M. Fredrikson, J. Z. Kolter, and
+            D. Hendrycks. Representation engineering: A top-down approach to ai transparency, 2023.
+          </p><p class="text-slate-500">
+            [27] Kirchenbauer, J., Geiping, J., Wen, Y., Katz, J., Miers, I., & Goldstein, T. (2023). A watermark for
+            large language models. In Proceedings of the 40th International Conference on Machine Learning.
+          </p><p class="text-slate-500">
+            [28] Nasr, M., Carlini, N., Hayase, J., Jagielski, M., Cooper, A. F., Ippolito, D., ... & Lee, K. (2023).
+            Scalable extraction of training data from (production) language models.
+          </p><p class="text-slate-500">
+            [29] S. R. Bowman, J. Hyun, E. Perez, E. Chen, C. Pettit, S. Heiner, K. Lukoˇsi ̄ut ̇e, A. Askell, A. Jones,
+            A. Chen, A. Goldie, A. Mirhoseini, C. McKinnon, C. Olah, D. Amodei, D. Amodei, D. Drain, D. Li, E.
+            Tran-Johnson, J. Kernion, J. Kerr, J. Mueller, J. Ladish, J. Landau, K. Ndousse, L. Lovitt, N. Elhage, N.
+            Schiefer, N. Joseph, N. Mercado, N. DasSarma, R. Larson, S. McCandlish, S. Kundu, S. Johnston, S. Kravec, S.
+            E. Showk, S. Fort, T. Telleen-Lawton, T. Brown, T. Henighan, T. Hume, Y. Bai, Z. Hatfield-Dodds, B. Mann,
+            and J. Kaplan. Measuring progress on scalable oversight for large language models, 2022.
+          </p><p class="text-slate-500">
+            [30] Yao, Y., Xu, X., & Liu, Y. (2023). Large language model unlearning. arXiv preprint arXiv:2310.10683.
+          </p><p class="text-slate-500">
+            [31] S. Casper, C. Ezell, C. Siegmann, N. Kolt, T. L. Curtis, B. Bucknall, A. Haupt, K. Wei, J. Scheurer, M.
+            Hobbhahn, L. Sharkey, S. Krishna, M. V. Hagen, S. Alberti, A. Chan, Q. Sun, M. Gerovitch, D. Bau, M.
+            Tegmark, D. Krueger, and D. Hadfield-Menell. Black-box access is insufficient for rigorous ai audits, 2024.
+          </p><p class="text-slate-500">
+            [32] M. Bhatt, S. Chennabasappa, C. Nikolaidis, S. Wan, I. Evtimov, D. Gabi, D. Song, F. Ahmad, C.
+            Aschermann, L. Fontana, S. Frolov, R. P. Giri, D. Kapil, Y. Kozyrakis, D. LeBlanc, J. Milazzo, A. Straumann,
+            G. Synnaeve, V. Vontimitta, S. Whitman, and J. Saxe. Purple llama cyberseceval: A secure coding benchmark
+            for language models, 2023.
+          </p><p class="text-slate-500">
+            [33] D. Ganguli, L. Lovitt, J. Kernion, A. Askell, Y. Bai, S. Kadavath, B. Mann, E. Perez, N. Schiefer, K.
             Ndousse, A. Jones, S. Bowman, A. Chen, T. Conerly, N. DasSarma, D. Drain, N. Elhage, S. El-Showk, S. Fort,
             Z. Hatfield-Dodds, T. Henighan, D. Hernandez, T. Hume, J. Jacobson, S. Johnston, S. Kravec, C. Olsson, S.
             Ringer, E. Tran-Johnson, D. Amodei, T. Brown, N. Joseph, S. McCandlish, C. Olah, J. Kaplan, and J. Clark.
             Red teaming language models to reduce harms: Methods, scaling behaviors, and lessons learned, 2022.
-          </p>
-          <p class="text-slate-500">
-            [11] Henderson, P., Mitchell, E., Manning, C., Jurafsky, D., & Finn, C. (2023). Self-destructing models:
+          </p><p class="text-slate-500">
+            [34] Henderson, P., Mitchell, E., Manning, C., Jurafsky, D., & Finn, C. (2023). Self-destructing models:
             Increasing the costs of harmful dual uses of foundation models. In Proceedings of the 2023 AAAI/ACM
             Conference on AI, Ethics, and Society, AIES ’23.
+          </p><p class="text-slate-500">
+            [35] Y. Dong, H. Chen, J. Chen, Z. Fang, X. Yang, Y. Zhang, Y. Tian, H. Su, and J. Zhu. How robust is
+            google’s bard to adversarial image attacks?, 2023.
           </p>
           <p class="text-slate-500">
-            [12] Huang, Q., Dong, X., Zhang, P., Wang, B., He, C., Wang, J., Lin, D., Zhang, W., & Yu, N. (2023). Opera:
-            Alleviating hallucination in multi-modal large language models via over-trust penalty and
-            retrospection-allocation.
-          </p>
-          <p class="text-slate-500">
-            [13] Jain, N., Schwarzschild, A., Wen, Y., Somepalli, G., Kirchenbauer, J., yeh Chiang, P., ... & Goldstein,
-            T. (2023). Baseline defenses for adversarial attacks against aligned language models.
-          </p>
-          <p class="text-slate-500">
-            [14] Kirchenbauer, J., Geiping, J., Wen, Y., Katz, J., Miers, I., & Goldstein, T. (2023). A watermark for
-            large language models. In Proceedings of the 40th International Conference on Machine Learning.
-          </p>
-          <p class="text-slate-500">[15] Liu, H., Li, C., Wu, Q., & Lee, Y. J. (2023). Visual instruction tuning.</p>
-          <p class="text-slate-500">
-            [16] Meng, K., Bau, D., Andonian, A., & Belinkov, Y. (2022). Locating and editing factual associations in
-            GPT.
-          </p>
-          <p class="text-slate-500">
-            [17] Nasr, M., Carlini, N., Hayase, J., Jagielski, M., Cooper, A. F., Ippolito, D., ... & Lee, K. (2023).
-            Scalable extraction of training data from (production) language models.
-          </p>
-          <p class="text-slate-500">[18] OpenAI. (2023). Practices for governing agentic AI systems.</p>
-          <p class="text-slate-500">[19] OpenAI. (2023). GPT-4 with vision (GPT-4v) system card.</p>
-          <p class="text-slate-500">
-            [20] Qin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y., ... & Sun, M. (2023). ToolIIM: Facilitating large
-            language models to master 16000+ real-world APIs.
-          </p>
-          <p class="text-slate-500">
-            [21] Rafailov, R., Sharma, A., Mitchell, E., Ermon, S., Manning, C. D., & Finn, C. (2023). Direct preference
-            optimization: Your language model is secretly a reward model.
-          </p>
-          <p class="text-slate-500">
-            [22] Robey, A., Wong, E., Hassani, H., & Pappas, G. J. (2023). SmoothLLM: Defending large language models
-            against jailbreaking attacks.
-          </p>
-          <p class="text-slate-500">
-            [23] Sharma, M., Tong, M., Korbak, T., Duvenaud, D., Askell, A., Bowman, S. R., ... & Perez, E. (2023).
-            Towards understanding sycophancy in language models.
-          </p>
-          <p class="text-slate-500">
-            [24] Bai, J., Bai, S., Yang, S., Wang, S., Tan, S., Wang, P., ... & Zhou, J. (2023). Qwen-vl: A frontier
-            large vision-language model with versatile abilities. arXiv preprint arXiv:2308.12966.
-          </p>
-          <p class="text-slate-500">
-            [25] Liu, H., Li, C., Wu, Q., & Lee, Y. J. (2024). Visual instruction tuning. Advances in neural information
-            processing systems, 36.
-          </p>
-          <p class="text-slate-500">
-            [26] Rombach, R., Blattmann, A., Lorenz, D., Esser, P., & Ommer, B. (2022). High-resolution image synthesis
-            with latent diffusion models. In Proceedings of the IEEE/CVF conference on computer vision and pattern
-            recognition.
-          </p>
-          <p class="text-slate-500">
-            [27] Ma, X., Wang, Y., Jia, G., Chen, X., Liu, Z., Li, Y. F., ... & Qiao, Y. (2024). Latte: Latent diffusion
-            transformer for video generation. arXiv preprint arXiv:2401.03048.
-          </p>
-          <p class="text-slate-500">
-            [28] Yin, Z., Wang, J., Cao, J., Shi, Z., Liu, D., Li, M., Sheng, L., Bai, L., Huang, X., Wang, Z., & others
+            [36] Yin, Z., Wang, J., Cao, J., Shi, Z., Liu, D., Li, M., Sheng, L., Bai, L., Huang, X., Wang, Z., & others
             (2023). LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark. arXiv
             preprint arXiv:2306.06687.
           </p>
         </div>
-
-        <div class="flex justify-center mt-8"><Button id="toggleButton" class="cursor-pointer"> Expand </Button></div>
       </div>
+      <div class="flex justify-center mt-8"><Button id="toggleButton" class="cursor-pointer"> Expand </Button></div>
     </Fragment>
-  </Content>
-  <script>
-    const button = document.getElementById('toggleButton');
-    const content = document.getElementById('content');
-    let isOpen = false;
-    if (button && content) {
-      button.addEventListener('click', () => {
-        if (!isOpen) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-          button.textContent = 'Collapse';
-          isOpen = true;
-        } else {
-          content.style.maxHeight = '';
-          button.textContent = 'Expand';
-          isOpen = false;
-        }
-      });
-    }
-  </script>
+    <script>
+      const button = document.getElementById('toggleButton');
+      const content = document.getElementById('content');
+      let isOpen = false;
+      if (button && content) {
+        button.addEventListener('click', () => {
+          if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            button.textContent = 'Collapse';
+            isOpen = true;
+          } else {
+            content.style.maxHeight = '';
+            button.textContent = 'Expand';
+            isOpen = false;
+          }
+        });
+      }
+    </script>
 
-  <!-- Brands Widget ****************** -->
-  <!-- 
+    <!-- Brands Widget ****************** -->
+    <!-- 
   <Sponsor
     id="Sponsor"
     tagline="Sponsor"
@@ -977,4 +978,5 @@ const metadata = {
       },
     ]}
   /> -->
+  </Content>
 </Layout>
