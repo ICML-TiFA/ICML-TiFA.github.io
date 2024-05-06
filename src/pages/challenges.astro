@@ -60,24 +60,11 @@ const headerData = {
 
   <!-- Content Widget **************** -->
 
-  <Content id="Overview">
+  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
     <Fragment slot="title"> Overview </Fragment><Fragment slot="subtitle"
       >Welcome to the ICML 2024 Workshop on Trustworthy in Multi-modal Foundation Models and AI Agents (TiFA)
     </Fragment>
-    <Fragment slot="content"
-      ><div class="mb-4">
-        Multi-modal Foundation Models (MFMs) have witnessed significant advancements in various bench marks and
-        practical applications. They are proficient in a wide range of tasks, and capable of pro ducing varied
-        multimodal responses. Nowadays a couple of MFMs have been deployed as realistic applications (such as GPT-4 [18]
-        and Midjourney [25]). Meanwhile, a large variety of MFMs (like InternLM [24] and LLaVA [14]) are still under
-        further research. Furthermore, foundation models with their powerful reasoning capabilities have led to the
-        emergence of various AI Agents [19, 28]. These agents are often capable of understanding open-world
-        instructions, breaking down complex tasks, and taking steps to achieve their goals.
-      </div>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+    <Fragment slot="content"> </Fragment>
   </Content>
 
   <Testimonials
@@ -85,39 +72,39 @@ const headerData = {
     testimonials={[
       {
         title: 'Track 1',
-        name: 'OpenLane Topology Challenge',
+        name: 'Attack Challenge',
         image: {
-          src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-          alt: 'Sidney Hansen Image',
+          src: '/track1.png',
+          alt: 'Track 1',
         },
         link: '#TRACK1',
-        job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+        job: 'Multimodal large language models, specifically large language models that can accept images (single image/multiple images) and can do visual question and answer tasks, then if the input image or input text contains some inducing or harmful properties content, it is possible for large multi-modal models to answer harmful content. In addition, if some perturbations are added to images or texts, it may cause the performance of large multi-modal models to decline in various visual tasks. This requires us to study what impact different input perturbations or some attack methods on image text will have on multi-modal large models, especially on trustworthiness, and how to defend against these possible impacts.',
       },
       {
         title: 'Track 2',
-        name: 'OpenLane Topology Challenge',
+        name: 'Defense Challenge',
         image: {
-          src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-          alt: 'Sidney Hansen Image',
+          src: '/track2.png',
+          alt: 'Track 2',
         },
         link: '#TRACK2',
-        job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+        job: 'Multimodal large language models, specifically large language models that can accept images (single image/multiple images) and can do visual question and answer tasks. When input images or texts contain malicious content or are subtly altered through perturbations, MLLMs can generate harmful responses or suffer from degraded performance across various visual tasks. This vulnerability poses a critical challenge to the trustworthiness and safety of MLLMs, necessitating robust defense mechanisms.The primary objective of this challenge is to develop innovative strategies and techniques to protect MLLMs against adversarial attacks that exploit their multimodal capabilities.',
       },
       {
         title: 'Track 3',
-        name: 'OpenLane Topology Challenge',
+        name: 'Agent Trustworthy Challenge',
         image: {
-          src: 'https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-          alt: 'Sidney Hansen Image',
+          src: '/track3.png',
+          alt: 'Track 3',
         },
         link: '#TRACK3',
-        job: 'Go beyond conventional lane line detection as segmentation. Recognizing lanes as an abstraction of the scene - centerline, and building the topology between lanes and traffic elements. Such a topology is to facilitate planning and routing.',
+        job: "The evolution of Artificial Intelligence (AI) reflects its increasing capability and integration into our daily lives, from basic automated tools to sophisticated, autonomous systems. Initially, AI systems were simple agents performing goal-directed actions without specific human commands. Over time, these evolved into Large Language Models (LLMs) like GPT-4, which not only execute complex tasks but also enhance decision-making through advanced language understanding and generation capabilities. The most advanced tier of AI development includes ethically aligned, trustworthy agents. These agents are designed to operate reliably within ethical and safety frameworks, illustrating both the benefits and the essential need to manage the risks associated with AI's integration into society. This tiered framework—from basic agents, through linguistically skilled LLMs, to ethically guided trustworthy agents—underscores the progression and potential of AI in enhancing human capabilities and addressing complex challenges.",
       },
     ]}
   />
-  <Track1 title="3D Occupancy Prediction" tagline="Track 1" id="TRACK1" />
-  <Track2 title="3D Occupancy Prediction" tagline="Track 2" id="TRACK2" />
-  <Track3 title="3D Occupancy Prediction" tagline="Track 3" id="TRACK3" />
+  <Track1 title="Attack Challenge" tagline="Track 1" id="TRACK1" />
+  <Track2 title="Defense Challenge" tagline="Track 2" id="TRACK2" />
+  <Track3 title="Agent Trustworthy Challenge" tagline="Track 3" id="TRACK3" />
   <FAQs
     title="Frequently Asked Questions"
     items={[
