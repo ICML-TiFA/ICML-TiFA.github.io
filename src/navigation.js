@@ -3,7 +3,7 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Call For Papers',
+      text: 'Call for Papers',
       href: getPermalink('/#Call-For-Papers'),
     },
     {
@@ -11,7 +11,7 @@ export const headerData = {
       href: getPermalink('/#Submission-Guide'),
     },
     {
-      text: 'Organizers',
+      text: 'Organizing Committee',
       href: getPermalink('/#Organizers'),
     },
     {
