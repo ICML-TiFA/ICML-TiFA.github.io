@@ -67,20 +67,25 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
   <div id="track2-pagination" class="my-4 flex justify-center items-center"></div> -->
   <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
   <p class="text-gray-700">
-    In the challenge, participants are tasked with modifying either image or text inputs in a manner that maximizes the
-    model's accuracy. The goal is to demonstrate the ability to enhance the model's performance through strategic
-    alterations to the inputs, without compromising the integrity or relevance of the data.
+    In this challenge, participants are tasked with modifying either image or text inputs in a way that maximizes the
+    model's accuracy. The objective is to demonstrate the ability to maintain the model's performance in the face of
+    strategic modifications to the inputs, while preserving the integrity and relevance of the data.
   </p>
   <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
-  <p class="text-gray-700">
+  <p class="text-gray-700">Participants need to provide the inference code and readme to apply the code.</p>
+  <p class="text-gray-700 mt-4">
     Submissions will be assessed based on the following primary metrics:
-    <li class="mt-4">
-      Choice Accuracy: The ability of the model to select or generate the correct answer from the given inputs.
-    </li>
-    <li>Answer Safety: Ensuring that the model's responses are free from harmful, biased, or inappropriate content.</li>
     <li>
-      Adversarial Input Similarity: The degree to which the modified inputs retain similarity to the original data,
-      ensuring that alterations do not significantly deviate from the intended content or context.
+      <strong>Choice Accuracy: </strong>The ability of the model to select or generate the correct answer from the given
+      inputs.
+    </li>
+    <li>
+      <strong>Answer Safety: </strong>Ensuring that the model's responses are free from harmful, biased, or
+      inappropriate content.
+    </li>
+    <li>
+      <strong>Adversarial Input Similarity: </strong>The degree to which the modified inputs retain similarity to the
+      original data, ensuring that alterations do not significantly deviate from the intended content or context.
     </li>
   </p>
   <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
@@ -103,9 +108,11 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     </table>
   </div>
   <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
-  <a href="https://github.com/adwardlee/mllm_defense_challenge/issues" class="hover:underline text-sky-600 font-medium"
-    >GitHub issue</a
-  >
+  <li>
+    <a
+      href="https://github.com/adwardlee/mllm_defense_challenge/issues"
+      class="hover:underline text-sky-600 font-medium">GitHub issue</a>
+  </li>
   <h2 class="text-center text-2xl md:text-3xl py-8">Related Literature</h2>
   <li>
     <a href="https://arxiv.org/abs/2403.17830" class="hover:underline text-sky-600 font-medium"
