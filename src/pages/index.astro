@@ -26,15 +26,16 @@ const metadata = {
 
   <Hero2
     tagline="ICML 2024 Workshop"
-    actions={[{ variant: 'primary', text: 'Get Started', href: 'https://icml.cc/virtual/2024/workshop/29951' }]}
+    actions={[
+      { variant: 'primary', text: 'ICML Workshop Page', href: 'https://icml.cc/virtual/2024/workshop/29951' },
+      { variant: 'secondary', text: 'Submission Site', href: 'https://openreview.net/group?id=ICML.cc/2024/Workshop/TiFA' },
+    ]}
   >
     <Fragment slot="title">Trustworthy Multi-modal Foundation Models and AI Agents (TiFA)</Fragment>
 
     <Fragment slot="subtitle">
-      The Forty-first International Conference on Machine Learning <br /><span class="text-slate-500"
-        >@ Messe Wien Exhibition Congress Center, Vienna
-      </span>
-      <br /><span class="text-slate-300">Sat 27 Jul</span>
+      ICML 2024 @ Vienna, Austria, Jul 27 Sat
+      <br /><span class="text-slate-300">Submission Deadline: May 30, 2024 EOD AoE</span>
     </Fragment>
   </Hero2>
 
@@ -132,7 +133,13 @@ const metadata = {
     <Fragment slot="subtitle">Submission Instructions</Fragment>
     <Fragment slot="content" classes={{ container: 'py-2' }}
       ><ul class="list-outside list-disc">
-        <li>Submissions should be made on OpenReview.</li>
+        <li>
+          Submissions should be made on <a
+            href="https://openreview.net/group?id=ICML.cc/2024/Workshop/TiFA"
+            class="hover:underline text-sky-600 font-medium"
+            target="_blank">OpenReview</a
+          >.
+        </li>
         <li>
           Submissions should be anonymised papers up to 5 pages (appendices can be added to the main PDF); excluding
           references. Authors are required to include a "Social Impacts Statement" that highlights "potential broader
