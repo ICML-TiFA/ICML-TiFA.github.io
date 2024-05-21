@@ -66,14 +66,11 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     </div>
   </div>
   <div id="track1-pagination" class="my-4 flex justify-center items-center"></div> -->
-    <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
+    <h2 class="text-center text-2xl md:text-3xl py-8">Introduction</h2>
     <p class="text-gray-700">
-      The primary goal of this challenge is to execute a successful attack on a Multimodal Large Language Model (MLLM),
-      Llava-1.5. Participants must alter either the input image or text to significantly impair the model's accuracy.
-      The core of this challenge involves ingeniously designing inputs that prompt the MLLM to generate incorrect or
-      harmful outputs, thus evaluating the model's robustness against attacks.
+      Multimodal large language models (MLLMs), which are capable of processing images and performing visual question-and-answer tasks, may generate harmful content if the input image or text contains inducing or harmful properties. Furthermore, the introduction of perturbations to images or texts can degrade the performance of these models in various visual tasks, such as object counting and reasoning. This necessitates an investigation into the effects of different input perturbations or attack methods on the performance and trustworthiness of MLLMs. Understanding these impacts is crucial for developing strategies to mitigate potential risks associated with MLLMs. 
     </p>
-    <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
+    <!-- <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
     <p class="text-gray-700">Participants need to provide submission file which contains query and image.</p>
     <p class="text-gray-700 mt-4">
       Submissions will be evaluated based on the following criteria:
@@ -89,7 +86,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
         similarity between the original and modified inputs. This ensures that the attack remains subtle and tests the
         model's ability to detect nuanced alterations.
       </li>
-    </p>
+    </p> -->
     <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
     <div class="flex justify-center">
       <table class="bg-white">
@@ -109,7 +106,12 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
         </tbody>
       </table>
     </div>
-    <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
+    <div class="flex gap-8 justify-center mt-4">
+      <Button variant="secondary" href={'/challenges/track1'}>
+        <span>Check Details</span>
+      </Button>
+    </div>
+    <!-- <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
     <li>
       <a href="https://github.com/OpenSafetyLab/mllm_challenge/issues" class="hover:underline text-sky-600 font-medium"
         >GitHub issue</a
@@ -125,7 +127,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
       <a href="https://arxiv.org/abs/2402.05044" class="hover:underline text-sky-600 font-medium"
         >SALAD-Bench: A Hierarchical and Comprehensive Safety Benchmark for Large Language Models</a
       >
-    </li>
+    </li> -->
   </div>
 </div>
 

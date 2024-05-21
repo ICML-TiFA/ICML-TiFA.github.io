@@ -65,13 +65,18 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     </div>
   </div>
   <div id="track2-pagination" class="my-4 flex justify-center items-center"></div> -->
-  <h2 class="text-center text-2xl md:text-3xl py-8">Task Description</h2>
+  <h2 class="text-center text-2xl md:text-3xl py-8">Introduction</h2>
   <p class="text-gray-700">
-    In this challenge, participants are tasked with modifying either image or text inputs in a way that maximizes the
-    model's accuracy. The objective is to demonstrate the ability to maintain the model's performance in the face of
-    strategic modifications to the inputs, while preserving the integrity and relevance of the data.
+    Multimodal Large Language Models (MLLMs) possess the capability to process images and perform visual 
+    question-and-answer tasks. However, when input images or texts contain malicious content or are subtly 
+    altered through perturbations, MLLMs can generate harmful responses or experience degraded performance
+     across various visual tasks. This vulnerability represents a significant challenge to the
+      trustworthiness and safety of MLLMs, underscoring the need for robust defense mechanisms. 
+      The primary goal of this challenge is to devise innovative strategies and techniques to safeguard 
+      MLLMs against attacks that leverage their multimodal capabilities.
+
   </p>
-  <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
+  <!-- <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
   <p class="text-gray-700">Participants need to provide the inference code and readme to apply the code.</p>
   <p class="text-gray-700 mt-4">
     Submissions will be assessed based on the following primary metrics:
@@ -87,7 +92,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
       <strong>Adversarial Input Similarity: </strong>The degree to which the modified inputs retain similarity to the
       original data, ensuring that alterations do not significantly deviate from the intended content or context.
     </li>
-  </p>
+  </p> -->
   <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
   <div class="flex justify-center">
     <table class="bg-white">
@@ -107,7 +112,12 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
       </tbody>
     </table>
   </div>
-  <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
+  <div class="flex gap-8 justify-center mt-4">
+    <Button variant="secondary" href={'/challenges/track1'}>
+      <span>Check Details</span>
+    </Button>
+  </div>
+  <!-- <h2 class="text-center text-2xl md:text-3xl py-8">Contact</h2>
   <li>
     <a
       href="https://github.com/adwardlee/mllm_defense_challenge/issues"
@@ -123,7 +133,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     <a href="https://arxiv.org/abs/2402.05044" class="hover:underline text-sky-600 font-medium"
       >SALAD-Bench: A Hierarchical and Comprehensive Safety Benchmark for Large Language Models</a
     >
-  </li>
+  </li> -->
 </div>
 
 <script>
