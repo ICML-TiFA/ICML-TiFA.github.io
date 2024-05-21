@@ -11,11 +11,15 @@ export const headerData = {
       href: getPermalink('/#Submission-Guide'),
     },
     {
-      text: 'Organizing Committee',
+      text: 'OC',
       href: getPermalink('/#Organizers'),
     },
     {
-      text: 'Steering Committee',
+      text:'CO',
+      href:getPermalink('/#Challenge-Organizer')
+    },
+    {
+      text: 'SC',
       href: getPermalink('/#Steering-Committee'),
     },
   ],

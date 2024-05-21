@@ -82,7 +82,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     ]}
   >
     <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between']}>
-      <a class="flex items-center" href={getHomePermalink()}>
+      <a class="flex items-center font-xxsmall" href={getHomePermalink()}>
         <Logo />
       </a>
       <div class="flex items-center md:hidden">
@@ -110,7 +110,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                       <li>
                         <a
                           class:list={[
-                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap font-xs',
                             { 'aw-link-active': href2 === currentPath },
                           ]}
                           href={href2}
