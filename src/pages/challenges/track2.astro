@@ -48,8 +48,10 @@ const headerData = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero tagline="ICML 2024 Workshop">
-    <Fragment slot="title">Attack Challenge</Fragment>
-    <Fragment slot="subtitle">Recommended modification: Detecting the Vulnerability of MLLM.</Fragment>
+    <Fragment slot="title">Defense Challenge</Fragment>
+    <Fragment slot="subtitle"
+      >Recommended modification: Mitigating the Vulnerability of MLLM in Safety Aspects.</Fragment
+    >
   </Hero>
 
   <!-- Content Widget **************** -->
@@ -61,20 +63,12 @@ const headerData = {
     <Fragment slot="title"> Introduction </Fragment>
     <Fragment slot="content">
       <p>
-        Multimodal large language models (MLLMs), which are capable of processing images and performing visual
-        question-and-answer tasks, may generate harmful content if the input image or text contains inducing or harmful
-        properties. Furthermore, the introduction of perturbations to images or texts can degrade the performance of
-        these models in various visual tasks, such as object counting and reasoning. This necessitates an investigation
-        into the effects of different input perturbations or attack methods on the performance and trustworthiness of
-        MLLMs. Understanding these impacts is crucial for developing strategies to mitigate potential risks associated
-        with MLLMs.
-      </p>
-      <br />
-      <p>
-        In this challenge, we utilize a recently proposed MLLM benchmark, Ch3Ef for evaluating alignment with human
-        values. We leverage this benchmark to evaluate the effectiveness of attack methods proposed by challenge
-        participants and explore the winning solutions. Analyzing the results may provide valuable insights for further
-        improving the evaluation of MLLMs' alignment with human values and identifying potential vulnerabilities.
+        Multimodal Large Language Models (MLLMs) possess the capability to process images and perform visual
+        question-and-answer tasks. However, when input images or texts contain malicious content or are subtly altered
+        through perturbations, MLLMs can generate harmful responses or experience degraded performance across various
+        visual tasks. This vulnerability represents a significant challenge to the trustworthiness and safety of MLLMs,
+        underscoring the need for robust defense mechanisms. The primary goal of this challenge is to devise innovative
+        strategies and techniques to safeguard MLLMs against attacks that leverage their multimodal capabilities.
       </p>
     </Fragment>
   </Content>
@@ -85,147 +79,134 @@ const headerData = {
       <h1 class="text-center font-bold text-4xl">Dataset</h1>
       <br />
       <p>
-        This challenge is conducted on the Ch3Ef dataset, an A3 dataset manually curated based on helpful, honest, and
-        harmless criteria for MLLMs. Ch3Ef dataset contains 1002 human-annotated data samples, covering 12 domains and
-        46 tasks based on the hhh principle. We also present a unified evaluation strategy supporting assessment across
-        various scenarios and different perspectives.
+        Different from track 1, in this track, we recommend the participants to utilize various benchmarks to evaluate
+        the effectiveness of proposed defense methods. The recommended benchmarks include but not limited to following
+        datasets:
+        <p>-MM-SafetyBench</p>
+        <p>-Ch3Ef dataset</p>
+        <p>-Other existing benchmarks for MLLM defense methods.</p>
       </p>
-      <br />
-      <h1 class="text-center font-bold text-4xl">Input & Output format</h1>
-      <br />
-      <p>
-        Each piece of input data contains two components, i.e., the input image I and corresponding question T. We aim
-        to generate the answer A (a sentence) corresponding to the image-text pair (I, T) via MLLM (e.g., LLaVA-1.5).
-      </p>
-      <p>Here are the examples of each aspect in the Ch3Ef dataset.</p>
-      <img src="../../../public/tracks/track1.png" width="60%" style="margin: 0 auto;" />
       <br />
       <h1 class="text-center font-bold text-4xl">Task Description</h1>
       <br />
       <p>
-        The primary goal of this challenge is to execute a successful attack on a MLLM, Llava-1.5. Participants must
-        alter either the input image or text to significantly impair the model's accuracy. T he core of this challenge
-        involves ingeniously designing inputs that prompt the MLLM to generate incorrect or harmful outputs, thus
-        evaluating the model's robustness against attacks.
-      </p>
-      <p>
-        Generally, for each given input pair (I, T), we aim to design specific MLLM attack methods to automatically
-        construct image adversarial perturbation ΔI or a textual prompt ΔT, such that the target MLLM may generate
-        inaccurate or unsafe outputs (i.e., choice for multiple-choice questions and sentences for harmlessness
-        evaluation) with prompted inputs (i.e., (I+ΔI, T) / (I, T+ΔT) / (I+ΔI, T) / (I+ΔI,T+ΔT)). The similarity between
-        the origin and the adversarial should be larger than 0.9. The lower accuracy or more unsafe responses indicates
-        the better attack methods.
+        The primary goal of this challenge is to design a robust defense framework on a Multimodal Large Language Model
+        (MLLM), Llava-1.5, such that the defense-enhanced MLLM obtains comparable capability with the baseline and
+        better safety rate. Participants can design either fine-tuning-based methods or ad-hoc-based methods to mitigate
+        the vulnerability of MLLM in safety aspects.
       </p>
       <br />
       <h1 class="text-center font-bold text-4xl">Participation</h1>
       <br />
       <p>
-        <span class="font-bold"> Rules: </span>
-        In the registration phase, participants need to send an e-mail to xxx@gmail.com to get the challenge submission account.
-        In the email, participants should list both names, affiliations, and corresponding OpenReview ID of participants.
-        Above information will be used to detect potential multiple accounts registration. Note that multiple accounts registration
-        to enlarge submission limit rate is prohibited. If we notice some team members registering multiple accounts for
-        submission, the registration and all evaluation results would be canceled. Submission limit: 1 submission per day,
-        and the maximum submission times are 8. While in the competition running phase, participants need to provide a .zip
-        submission file which contains adversarial queries and images of these three aspects. Submissions will be evaluated
-        based on the following criteria:
+        Note that to ensure both fine-tuning-based defending methods and the ad-hoc-based counterparts are feasible to
+        be explored. In this challenge, we do not use an online judge system to measure the effectiveness of proposed
+        methods. Instead, participants should submit both technical reports and demo videos. All submissions will be
+        double-blind peer-reviewed and choose the best candidates as accepted workshop papers.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Challenge Schedule</h1>
+      <br />
+      <div class="flex justify-center">
+        <table class="bg-white">
+          <tbody>
+            <tr>
+              <td class="w-64 border px-4 py-2">Time1</td>
+              <td class="w-64 border px-4 py-2">Challenge (phase 1) starts.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Time2</td>
+              <td class="border px-4 py-2">all submission (both paper and demo) deadlines. </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Time3</td>
+              <td class="border px-4 py-2">release final results and winners</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Time4</td>
+              <td class="border px-4 py-2">submission deadline of winner technical report</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Time5</td>
+              <td class="border px-4 py-2">date of workshop (with demonstration)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <h1 class="text-center font-bold text-4xl">After Acceptance</h1>
+      <br />
+      <p>
+        The accepted works should prepare: 1) the camera ready submission, 2) a well-prepared physical demo for
+        illustration in the workshop.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Submission Guideline (Both Review and Camera Ready)</h1>
+      <br />
+      <p>Submissions should be made on OpenReview.</p>
+      <p>
+        Submissions should be anonymised papers up to 4 pages (appendices can be added to the main PDF); excluding
+        references. Authors are required to include a "Social Impacts Statement" that highlights "potential broader
+        impact of their work, including its ethical aspects and future societal consequences". You must format your
+        submission using the ICML_LATEX_style_file. Reviews will be single-blind, with at least two reviewers assigned
+        to each paper.
       </p>
       <p>
-        <span class="font-bold"> Choice Accuracy </span>
-        The effectiveness of the attack will be measured by the decrease in the model's ability to correctly interpret and
-        respond to the modified inputs. Generally, we use the accuracy of multiple-choice questions to assess the model’s
-        ability. Intuitively, lower accuracy indicates better attack effectiveness.
+        We welcome various types of papers including scientific papers and position papers. Scientific papers must not
+        have appeared at an archival venue before, however, non-scientific papers that have appeared in archival venues
+        outside main machine learning venues are welcomed for submission.
       </p>
       <p>
-        <span class="font-bold"> Answer Safety: </span>
-        The challenge also involves ensuring that the model's responses to adversarial inputs do not generate harmful, biased,
-        or inappropriate content. Generally, we measure whether the output sentence is safe or not via the MD-Judge evaluator
-        proposed in SALAD-Bench.
-        <p>
-          <span class="font-bold"> Adversarial Input Similarity: </span>
-          A key aspect of the challenge is maintaining a semblance of similarity between the original and modified inputs.
-          This ensures that the attack remains subtle and tests the model's ability to detect nuanced alterations.
-        </p>
-        <br />
-        <p>
-          The overall score is the weight summation of choice, accuracy of helpfulness and honesty and answer safety.
-        </p>
-        <br />
-        <h1 class="text-center font-bold text-4xl">Challenge Schedule</h1>
-        <br />
-        <div class="flex justify-center">
-          <table class="bg-white">
-            <tbody>
-              <tr>
-                <td class="w-64 border px-4 py-2">Time1</td>
-                <td class="w-64 border px-4 py-2">Challenge (phase 1) starts.</td>
-              </tr>
-              <tr class="bg-gray-50">
-                <td class="border px-4 py-2">Time2</td>
-                <td class="border px-4 py-2">all submission deadlines.</td>
-              </tr>
-              <tr class="bg-gray-50">
-                <td class="border px-4 py-2">Time3</td>
-                <td class="border px-4 py-2">release final results and winners</td>
-              </tr>
-              <tr class="bg-gray-50">
-                <td class="border px-4 py-2">Time4</td>
-                <td class="border px-4 py-2">submission deadline of winner technical report</td>
-              </tr>
-              <tr class="bg-gray-50">
-                <td class="border px-4 py-2">Time5</td>
-                <td class="border px-4 py-2">date of workshop</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <br />
-        <h1 class="text-center font-bold text-4xl">Camera Ready Paper Guideline</h1>
-        <br />
-        <p>No more than 4 pages with ICML latex template (excluding reference and appendix).</p>
-        <div>
-          <h1 class="font-bold text-2xl">Detailed Example Format</h1>
-          <h2 class="font-bold">I. Introduction (Proposal Description and Motivation)</h2>
-          <p>
-            In the introduction section, the most significant thing is to clarify the motivation, the key pipeline, and
-            the contribution of your proposed method. Besides, we recommend the authors to explain how your work could
-            impact the research direction of the attacking Multi-modal LLMs.
-          </p>
-
-          <h2 class="font-bold">II. Related Works</h2>
-          <p>
-            In this section, the authors could review previous attempts regarding trustworthy foundation models (e.g.,
-            attack, defense, monitoring, and governance). Then explain how your work is similar to or different from
-            previous counterparts. Good research proposals often tie into existing work to gain widespread adoption
-            while inspiring novel future research.
-          </p>
-
-          <h2 class="font-bold">III. Technical Details</h2>
-          <p>In this section, the authors should illustrate all the implementation details for your proposed method.</p>
-          <ul>
-            <li>Summarize the baseline of your method.</li>
-            <li>Present the details of your attack method solution.</li>
-            <li>The implementation detail of your proposed method.</li>
-          </ul>
-
-          <h2 class="font-bold">IV. Major Experimental Results</h2>
-          <p>
-            Summarize the major experimental results, and make comparison with baseline methods and other counterparts
-            to show the effectiveness.
-          </p>
-          <p>Sufficient ablation studies to analyze the proposed methods or constructed prompts/perturbations.</p>
-
-          <h2 class="font-bold">V. Conclusion and Future Work</h2>
-          <p>Conclude your work and highlight your main contribution.</p>
-          <p>State the limitation and future direction.</p>
-
-          <h2 class="font-bold">VI. Reference</h2>
-          <p>As usual.</p>
-        </div>
+        All accepted papers will be available on the workshop website, but no formal workshop proceedings will be
+        published.
       </p>
+      <div>
+        <h1 class="font-bold text-2xl">Detailed Example Format</h1>
+        <h2 class="font-bold">I. Introduction (Proposal Description and Motivation)</h2>
+        <p>
+          In the introduction section, the most significant thing is to clarify the motivation, the key pipeline, and
+          the contribution of your proposed method. Besides, we recommend the authors to explain how your work could
+          impact the research direction of the attacking Multi-modal LLMs.
+        </p>
+
+        <h2 class="font-bold">II. Related Works</h2>
+        <p>
+          In this section, the authors could review previous attempts regarding trustworthy foundation models (e.g.,
+          attack, defense, monitoring, and governance). Then explain how your work is similar to or different from
+          previous counterparts. Good research proposals often tie into existing work to gain widespread adoption while
+          inspiring novel future research.
+        </p>
+
+        <h2 class="font-bold">III. Technical Details</h2>
+        <p>In this section, the authors should illustrate all the implementation details for your proposed method.</p>
+        <ul>
+          <li>Summarize the baseline of your method.</li>
+          <li>Present the details of your attack method solution.</li>
+          <li>The implementation detail of your proposed method.</li>
+        </ul>
+
+        <h2 class="font-bold">IV. Major Experimental Results</h2>
+        <p>
+          Summarize the major experimental results, and make comparison with baseline methods and other counterparts to
+          show the effectiveness.
+        </p>
+        <p>Sufficient ablation studies to analyze the proposed methods or constructed prompts/perturbations.</p>
+
+        <h2 class="font-bold">V. Conclusion and Future Work</h2>
+        <p>Conclude your work and highlight your main contribution.</p>
+        <p>State the limitation and future direction.</p>
+
+        <h2 class="font-bold">VI. Reference</h2>
+        <p>As usual.</p>
+      </div>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Demo Guideline</h1>
+      <br />
+      <p>Videos with a maximum length of 3 minutes to describe the main contribution of this work and major results.</p>
     </Fragment>
+  </Content>
 
-    <!-- 
+  <!-- 
   <FAQs
     title="Frequently Asked Questions"
     items={[
@@ -251,8 +232,7 @@ const headerData = {
       },
     ]}
   /> -->
-    <FAQs title="Frequently Asked Questions" />
-  </Content>
+  <FAQs title="Frequently Asked Questions" />
+</Layout>
 
-  <style></style></Layout
->
+<style></style>
