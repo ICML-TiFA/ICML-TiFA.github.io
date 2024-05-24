@@ -11,7 +11,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
     <Headline title={title} subtitle={subtitle} tagline={tagline} />
     <div class="flex gap-8 justify-center">
       <Button variant="secondary" href={'https://github.com/OpenSafetyLab/mllm_challenge'}>
-        <span class="mr-2">{'Github'}</span>
+        <span class="mr-2">{'Issues'}</span>
         <Icon name="tabler:chevron-right" class="w-6 h-6" />
       </Button><Button variant="secondary">
         <span class="mr-2">{'Submission'}</span>
@@ -68,7 +68,21 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
   <div id="track1-pagination" class="my-4 flex justify-center items-center"></div> -->
     <h2 class="text-center text-2xl md:text-3xl py-8">Introduction</h2>
     <p class="text-gray-700">
-      Multimodal large language models (MLLMs), which are capable of processing images and performing visual question-and-answer tasks, may generate harmful content if the input image or text contains inducing or harmful properties. Furthermore, the introduction of perturbations to images or texts can degrade the performance of these models in various visual tasks, such as object counting and reasoning. This necessitates an investigation into the effects of different input perturbations or attack methods on the performance and trustworthiness of MLLMs. Understanding these impacts is crucial for developing strategies to mitigate potential risks associated with MLLMs. 
+      <!-- Multimodal large language models (MLLMs), which are capable of processing images and performing visual
+      question-and-answer tasks, may generate harmful content if the input image or text contains inducing or harmful
+      properties. Furthermore, the introduction of perturbations to images or texts can degrade the performance of these
+      models in various visual tasks, such as object counting and reasoning. This necessitates an investigation into the
+      effects of different input perturbations or attack methods on the performance and trustworthiness of MLLMs.
+      Understanding these impacts is crucial for developing strategies to mitigate potential risks associated with
+      MLLMs. -->
+      The primary goal of this challenge is to execute a successful attack on a MLLM, Llava-1.5. Participants must alter
+      either the input image or text to significantly impair the model's accuracy. T he core of this challenge involves ingeniously
+      designing inputs that prompt the MLLM to generate incorrect or harmful outputs, thus evaluating the model's robustness
+      against attacks. Generally, for each given input pair (I, T), we aim to design specific MLLM attack methods to automatically
+      construct image adversarial perturbation ΔI or a textual prompt ΔT, such that the target MLLM may generate inaccurate
+      or unsafe outputs (i.e., choice for multiple-choice questions and sentences for harmlessness evaluation) with prompted
+      inputs (i.e., (I+ΔI, T) / (I, T+ΔT) / (I+ΔI, T) / (I+ΔI,T+ΔT)). The similarity between the origin and the adversarial
+      should be larger than 0.9. The lower accuracy or more unsafe responses indicates the better attack methods.
     </p>
     <!-- <h2 class="text-center text-2xl md:text-3xl py-8">Participation</h2>
     <p class="text-gray-700">Participants need to provide submission file which contains query and image.</p>
@@ -87,7 +101,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
         model's ability to detect nuanced alterations.
       </li>
     </p> -->
-    <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
+    <!-- <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
     <div class="flex justify-center">
       <table class="bg-white">
         <tbody>
@@ -105,7 +119,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
     <div class="flex gap-8 justify-center mt-4">
       <Button variant="secondary" href={'/challenges/track1'}>
         <span>Check Details</span>

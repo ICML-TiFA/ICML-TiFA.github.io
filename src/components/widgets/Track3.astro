@@ -6,12 +6,14 @@ import { Icon } from 'astro-icon/components';
 const { title = '', subtitle = '', tagline = '', id } = Astro.props;
 ---
 
-<div class="bg-blue-50 pb-8">
+<!-- <div class="bg-blue-50 pb-8"> -->
+
+<div class=" pb-8">
   <div class="max-w-7xl mx-auto pt-8" id={id}>
     <Headline title={title} subtitle={subtitle} tagline={tagline} />
     <div class="flex gap-8 justify-center">
       <Button variant="secondary" href={'#'}>
-        <span class="mr-2">{'Github'}</span>
+        <span class="mr-2">{'Issues'}</span>
         <Icon name="tabler:chevron-right" class="w-6 h-6" />
       </Button><Button variant="secondary">
         <span class="mr-2">{'Submission'}</span>
@@ -112,7 +114,7 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
         a competitive format.
       </li>
     </p> -->
-    <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
+    <!-- <h2 class="text-center text-2xl md:text-3xl py-8">Award</h2>
     <div class="flex justify-center">
       <table class="bg-white">
         <tbody>
@@ -130,9 +132,9 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
     <div class="flex gap-8 justify-center mt-4">
-      <Button variant="secondary" href={'/challenges/track3'}>
+      <Button variant="secondary" href={'/challenges/track2'}>
         <span>Check Details</span>
       </Button>
     </div>

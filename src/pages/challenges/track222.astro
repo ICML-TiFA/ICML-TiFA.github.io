@@ -1,0 +1,238 @@
+---
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+// import Timeline from '~/components/ui/Timeline.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+// import Brands from '~/components/widgets/Brands.astro';
+// import Timezone from '~/components/widgets/Timezone.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Track2 from '~/components/widgets/Track2.astro';
+import Track3 from '~/components/widgets/Track3.astro';
+import Track1 from '~/components/widgets/Track1.astro';
+import { getPermalink } from '~/utils/permalinks';
+// import Sponsor from '~/components/widgets/Sponsor.astro';
+
+const metadata = {
+  title: 'Challenges',
+};
+
+const headerData = {
+  links: [
+    {
+      text: 'TRACK1',
+      href: getPermalink('/challenges/track1'),
+    },
+    {
+      text: 'TRACK2',
+      href: getPermalink('/challenges/track2'),
+    },
+    {
+      text: 'TRACK3',
+      href: getPermalink('/challenges/track3'),
+    },
+    {
+      text: 'Home',
+      href: getPermalink('/'),
+    },
+  ],
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header {...headerData} isSticky />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero tagline="ICML 2024 Workshop">
+    <Fragment slot="title">Track2 - Defense Challenge</Fragment>
+    <Fragment slot="subtitle"
+      >Recommended modification: Mitigating the Vulnerability of MLLM in Safety Aspects.</Fragment
+    >
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+    <!-- <Fragment slot="bg">
+        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment> -->
+    <Fragment slot="title"> Introduction </Fragment>
+    <Fragment slot="content">
+      <p>
+        Multimodal Large Language Models (MLLMs) possess the capability to process images and perform visual
+        question-and-answer tasks. However, when input images or texts contain malicious content or are subtly altered
+        through perturbations, MLLMs can generate harmful responses or experience degraded performance across various
+        visual tasks. This vulnerability represents a significant challenge to the trustworthiness and safety of MLLMs,
+        underscoring the need for robust defense mechanisms. The primary goal of this challenge is to devise innovative
+        strategies and techniques to safeguard MLLMs against attacks that leverage their multimodal capabilities.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content>
+    <Fragment slot="title">General Guideline</Fragment>
+    <Fragment slot="content">
+      <h1 class="text-center font-bold text-4xl">Dataset</h1>
+      <br />
+      <p>
+        Different from track 1, in this track, we recommend the participants to utilize various benchmarks to evaluate
+        the effectiveness of proposed defense methods. The recommended benchmarks include but not limited to following
+        datasets:
+        <p>-MM-SafetyBench</p>
+        <p>-Ch3Ef dataset</p>
+        <p>-Other existing benchmarks for MLLM defense methods.</p>
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Task Description</h1>
+      <br />
+      <p>
+        The primary goal of this challenge is to design a robust defense framework on a Multimodal Large Language Model
+        (MLLM), Llava-1.5, such that the defense-enhanced MLLM obtains comparable capability with the baseline and
+        better safety rate. Participants can design either fine-tuning-based methods or ad-hoc-based methods to mitigate
+        the vulnerability of MLLM in safety aspects.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Participation</h1>
+      <br />
+      <p>
+        Note that to ensure both fine-tuning-based defending methods and the ad-hoc-based counterparts are feasible to
+        be explored. In this challenge, we do not use an online judge system to measure the effectiveness of proposed
+        methods. Instead, participants should submit both technical reports and demo videos. All submissions will be
+        double-blind peer-reviewed and choose the best candidates as accepted workshop papers.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Challenge Schedule</h1>
+      <br />
+      <div class="flex justify-center">
+        <table class="bg-white">
+          <tbody>
+            <tr>
+              <td class="w-64 border px-4 py-2">Time1</td>
+              <td class="w-64 border px-4 py-2">Challenge (phase 1) starts.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Time2</td>
+              <td class="border px-4 py-2">all submission (both paper and demo) deadlines. </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Time3</td>
+              <td class="border px-4 py-2">release final results and winners</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Time4</td>
+              <td class="border px-4 py-2">submission deadline of winner technical report</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">Time5</td>
+              <td class="border px-4 py-2">date of workshop (with demonstration)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <h1 class="text-center font-bold text-4xl">After Acceptance</h1>
+      <br />
+      <p>
+        The accepted works should prepare: 1) the camera ready submission, 2) a well-prepared physical demo for
+        illustration in the workshop.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Submission Guideline (Both Review and Camera Ready)</h1>
+      <br />
+      <p>Submissions should be made on OpenReview.</p>
+      <p>
+        Submissions should be anonymised papers up to 4 pages (appendices can be added to the main PDF); excluding
+        references. Authors are required to include a "Social Impacts Statement" that highlights "potential broader
+        impact of their work, including its ethical aspects and future societal consequences". You must format your
+        submission using the ICML_LATEX_style_file. Reviews will be single-blind, with at least two reviewers assigned
+        to each paper.
+      </p>
+      <p>
+        We welcome various types of papers including scientific papers and position papers. Scientific papers must not
+        have appeared at an archival venue before, however, non-scientific papers that have appeared in archival venues
+        outside main machine learning venues are welcomed for submission.
+      </p>
+      <p>
+        All accepted papers will be available on the workshop website, but no formal workshop proceedings will be
+        published.
+      </p>
+      <div>
+        <h1 class="font-bold text-2xl">Detailed Example Format</h1>
+        <h2 class="font-bold">I. Introduction (Proposal Description and Motivation)</h2>
+        <p>
+          In the introduction section, the most significant thing is to clarify the motivation, the key pipeline, and
+          the contribution of your proposed method. Besides, we recommend the authors to explain how your work could
+          impact the research direction of the attacking Multi-modal LLMs.
+        </p>
+
+        <h2 class="font-bold">II. Related Works</h2>
+        <p>
+          In this section, the authors could review previous attempts regarding trustworthy foundation models (e.g.,
+          attack, defense, monitoring, and governance). Then explain how your work is similar to or different from
+          previous counterparts. Good research proposals often tie into existing work to gain widespread adoption while
+          inspiring novel future research.
+        </p>
+
+        <h2 class="font-bold">III. Technical Details</h2>
+        <p>In this section, the authors should illustrate all the implementation details for your proposed method.</p>
+        <ul>
+          <li>Summarize the baseline of your method.</li>
+          <li>Present the details of your attack method solution.</li>
+          <li>The implementation detail of your proposed method.</li>
+        </ul>
+
+        <h2 class="font-bold">IV. Major Experimental Results</h2>
+        <p>
+          Summarize the major experimental results, and make comparison with baseline methods and other counterparts to
+          show the effectiveness.
+        </p>
+        <p>Sufficient ablation studies to analyze the proposed methods or constructed prompts/perturbations.</p>
+
+        <h2 class="font-bold">V. Conclusion and Future Work</h2>
+        <p>Conclude your work and highlight your main contribution.</p>
+        <p>State the limitation and future direction.</p>
+
+        <h2 class="font-bold">VI. Reference</h2>
+        <p>As usual.</p>
+      </div>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Demo Guideline</h1>
+      <br />
+      <p>Videos with a maximum length of 3 minutes to describe the main contribution of this work and major results.</p>
+    </Fragment>
+  </Content>
+
+  <!-- 
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'Can we submit a paper that will also be submitted to NeurIPS 2024?',
+        description: 'Yes.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Can we submit a paper that was accepted at ICLR 2024?',
+        description: 'No. ICML prohibits main conference publication from appearing concurrently at the workshops.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Will the reviews be made available to authors?',
+        description: 'Yes.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'I have a question not addressed here, whom should I contact?',
+        description: 'Email organizers at icmltifaworkshop@gmail.com',
+        icon: 'tabler:help-octagon',
+      },
+    ]}
+  /> -->
+  <FAQs title="Frequently Asked Questions" />
+</Layout>
+
+<style></style>
