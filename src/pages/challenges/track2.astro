@@ -63,122 +63,65 @@ const headerData = {
     <Fragment slot="title"> Introduction </Fragment>
     <Fragment slot="content">
       <p>
-        The evolution of Artificial Intelligence (AI) reflects its increasing capability and integration into our daily
-        lives, from basic automated tools to sophisticated, autonomous systems. Initially, AI systems were simple agents
-        performing goal-directed actions without specific human commands. Over time, these evolved into Multimodal Large
-        Language Models (MLLMs, e.g., GPT-4 / GPT-4o and Gemini), which not only execute complex tasks but also enhance
-        decision-making through advanced language understanding and generation capabilities. The most advanced tier of
-        AI development includes ethically aligned, trustworthy agents. These agents are designed to operate reliably
-        within ethical and safety frameworks, illustrating both the benefits and the essential need to manage the risks
-        associated with AI's integration into society. This tiered framework—from basic agents, through linguistically
-        skilled LLMs and MLLMs, to ethically guided trustworthy agents—underscores the progression and potential of AI
-        in enhancing human capabilities and addressing complex challenges.
+        The evolution of Artificial Intelligence (AI) shows its increasing sophistication and integration into daily
+        life, advancing from simple automated agents to Multimodal Large Language Models (MLLMs) like GPT-4 / GPT-4o,
+        and ultimately to ethically aligned, trustworthy agents. This progression—from basic agents to advanced,
+        linguistically skilled models and ethical agents—highlights AI's potential to enhance human capabilities and the
+        importance of managing associated risks.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Why organize this track?</h1>
+      <br />
+      <p>
+        Trustworthy evaluation of AI agents should extend beyond assessing the safety, factuality, and robustness of
+        backend models to include reliable and truthful interactions within the entire agent system. Currently, research
+        on the trustworthiness of multi-modal agents is in early stages, hindered by inadequate experimental
+        environments and benchmarks. Key questions and potential threats in trustworthy AI agents remain unclear,
+        necessitating better definitions and forecasting of safety threats. This track aims to encourage researchers to
+        offer constructive solutions and insights into trustworthy AI agents.
       </p>
       <p>
-        The trustworthiness of agents is a brand new field, significantly different from the traditional trustworthiness
-        of large language models (LLMs). This is mainly reflected in the following areas:
+        Early exploration of trustworthy agents has shown that this research is a brand new field. Meanwhile,
+        significantly different from the traditional trustworthiness of Multimodal Foundation Models (MFMs), nowadays
+        MFM-based agents still lack appropriate environments and benchmarks for further exploration and evaluation. Such
+        difference is mainly reflected in the following desired subject areas of this track:
       </p>
       <ul>
         <li>
-          <span class="font-bold">More complex environments: </span>
-          Agents can operate autonomously, utilizing tools [2, 3] or interacting with their environment [4]. For instance,
-          scenarios involving tool use may incorporate extensive external network or database information. In embodied scenarios,
-          agents interact in real-time with real or simulated environments. Traditional evaluations of trustworthy safety
-          in Large Language Models (LLMs) typically focus only on input and output, hence, a more comprehensive assessment
-          method is necessary to evaluate the safety of agents.
+          <span class="font-bold">More complex environments[1,7]: </span>
+          Agents operate autonomously, using tools [2,3] or interacting with real or simulated environments [4], which may
+          involve extensive external data. In contrast, environments for vanilla MFMs only leverage human-collected or self-instructed
+          data for simulation without complex interaction.
         </li>
         <li>
-          <span class="font-bold">More diverse benchmarks for trustworthy AI agent evaluation: </span>
-          The more complex macro-architecture of multi-modal AI agents indicates that the trustworthy evaluation for agents
-          should be revised. For instance, a comprehensive UI-assistant agent safety benchmark should evaluate both the safety
-          capability of each module (controller or planner) inside the agent against adversarial attack hidden in the website
-          or UI of applications, but also evaluate the safety in the collaboration among all modules against the whole attack
-          procedure. Therefore, more advanced evaluation metrics are also worthy to explore. Traditional evaluations of trustworthiness
-          and safety in Multi-modal Foundation Models (MFMs) typically focus only on input and output, hence, a more comprehensive
-          assessment method is necessary to evaluate the safety of agents [5].
-        </li>
-        <li>
-          <span class="font-bold">More complex agent systems:</span>
-          The current popular mode of agent interaction involves agent systems [1-3], where multiple agents collaborate.
-          This differs significantly from the traditional single-point security evaluations of LLMs in terms of trustworthiness.
-          We need to consider not only the trustworthiness of individual agents within a group but also the overall system’s
-          trustworthiness. Therefore, a more comprehensive and suitable evaluation framework for the trustworthiness of agent
-          systems is required.
-        </li>
-        <li>
-          <span class="font-bold">New position papers retarding trustworthy agents:</span>
-          Above difference has revealed that trustworthiness in AI agents are largely different from vanilla MFM trustworthy
-          assessment. Meanwhile, as the evolution of AI agent research and social environment, more novel safety threats
-          will be revealed gradually [5]. Therefore, we also strongly encourage the authors to submit new position papers
-          to rethink current trustworthy AI agent areas, and provide constructive or insightful high-level suggestions to
-          improve the trustworthiness in AI agents.
+          <span class="font-bold">More diverse benchmarks for trustworthy AI agent evaluation[8]: </span>
+          Evaluating the trustworthiness of multi-modal AI agents requires more diverse benchmarks due to their complex macro-architecture.
+          A comprehensive safety benchmark should assess each module's capability to withstand adversarial attacks and evaluate
+          the overall collaboration among modules against attack procedures. Traditional evaluations focus on input and output,
+          necessitating more advanced and comprehensive assessment methods for agent safety [5].
         </li>
       </ul>
-      <div class="text-sm">
-        <!-- 添加了Tailwind的类来设置整体字体大小 -->
-        <ul>
-          <li>[1] CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society</li>
-          <li>[2] MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework</li>
-          <li>[3] AutoGPT: <a href="https://github.com/Significant-Gravitas/AutoGPT" class="underline">AutoGPT</a></li>
-          <li>[4] RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control</li>
-          <li>
-            [5] Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast. <a
-              href="https://arxiv.org/abs/2402.08567"
-              class="underline">arXiv preprint arXiv:2402.08567</a
-            >.
-          </li>
-          <li>[6] PaLM-E: An Embodied Multimodal Language Model</li>
-          <li>[7] Octopus: Embodied Vision-Language Programmer from Environmental Feedback</li>
-        </ul>
-      </div>
-    </Fragment>
-  </Content>
-
-  <Content>
-    <Fragment slot="title"> General Guideline</Fragment>
-    <Fragment slot="content">
-      <h1 class="text-center font-bold text-4xl">Why Organize This Track?</h1>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Research Topics and Subject Areas</h1>
       <br />
       <p>
-        Different from trustworthy evaluation for unique multi-modal foundation models (MFMs, including but not limited
-        to LLMs), trustworthy investigation for AI agents should focus on not only the safety / factuality / robustness
-        of backend foundation models, but also reliable and truthful interaction within the whole agent systems (among
-        different modules or multiple agents). Nowadays, the investigation in trustworthiness for AI agents (especially
-        for multi-modal agents) is only in the early exploration. The available experimental environments and benchmarks
-        for agent trustworthiness are still insufficient, which restricts the exploration of more advanced trustworthy
-        AI agent learning or inference frameworks. Furthermore, the key questions and potential threats in trustworthy
-        AI agents are still worthy to be clarified. Clearer questions definition and forecasting for existing and future
-        safety threats in AI agents are also significant for future research.
-
-        <p>
-          Therefore we aim to organize this track, aiming to encourage researchers to provide constructive solutions or
-          insightful perspectives regarding trustworthy AI agents.
-        </p>
-      </p>
-      <br />
-      <h1 class="text-center font-bold text-4xl">Topic</h1>
-      <br />
-      <p class="font-bold">For research areas, supported topics are listed (but not limited to) as follows:</p>
-      <p>- Adversarial attack and defense, poisoning, hijacking and security for AI agents.</p>
-      <p>- Technical approaches to privacy, fairness, accountability and regulation for trustworthy agents.</p>
-      <p>- Transparency, interpretability and monitoring for trustworthy agents.</p>
-      <p>- Truthfulness, factuality, honesty and sycophancy of AI agents.</p>
-      <p>- Novel safety challenge with trustworthy AI agents.</p>
-      <p>- Realistic application for trustworthy AI agents.</p>
-      <p>- Trustworthy AI agents in social science.</p>
-      <p class="font-bold">For research work types, supported types are listed (but not limited to) as follows:</p>
-      <p>
-        - New AI agent environments / platforms / playgrounds for trustworthy agent research, simulation, and
-        application.
-      </p>
-      <p>- New AI agent trustworthy benchmarks for evaluation of existing or future trustworthy agents.</p>
-      <p>- New trustworthy agent frameworks for practical applications.</p>
-      <p>
-        - Insightful position paper to rethink critical issues and future directions regarding trustworthiness in AI
-        agents.
+        For research topics, supported topics are listed (but not limited to) as follows:
+        <li>Adversarial attack and defense, poisoning, hijacking and security for AI agents.</li>
+        <li>Technical approaches to privacy, fairness, accountability and regulation for trustworthy agents.</li>
+        <li>Transparency, interpretability and monitoring for trustworthy agents.</li>
+        <li>Truthfulness, factuality, honesty and sycophancy of AI agents.</li>
+        <li>Novel safety challenge with trustworthy AI agents.</li>
+        <li>Realistic application for trustworthy AI agents.</li>
+        <li>Trustworthy AI agents in social science.</li>
       </p>
       <p>
-        - Other related types to present your solutions or opinions regarding trustworthy AI agents are also feasible.
+        For subject areas, recommended types are listed (but not limited to) as follows:
+        <li>
+          New AI agent environments / platforms / playgrounds for trustworthy agent research, simulation, and
+          application.
+        </li>
+        <li>New AI agent trustworthy benchmarks for evaluation of existing or future trustworthy agents.</li>
+        Both mentioned subject areas are urgently needed for frontier trustworthy AI agent research.
       </p>
       <br />
       <h1 class="text-center font-bold text-4xl">Example Ideas</h1>
@@ -186,50 +129,94 @@ const headerData = {
       <p>
         In order to provide clearer guidance for submissions, we demonstrate some examples regarding the following
         topics:
-      </p>
-      <p>- A large-scale multi-agent playground / environment for social communication simulation.</p>
-      <p>- A comprehensive trustworthy benchmark for embodied AI agents.</p>
-      <p>- Adversarial attack and corresponding defense methods for UI-assistant agents.</p>
-      <p>- Revealing new safety threats in multi-agent systems.</p>
-      <br />
-      <h1 class="text-center font-bold text-4xl">Stage</h1>
-      <br />
-      <h2 class="font-bold text-2xl">Stage1</h2>
-      <p>Submit your proposal in the form of a workshop paper. It will be reviewed by an expert committee.</p>
-      <h2 class="font-bold text-2xl">Stage2</h2>
-      <p>
-        We will select the top 5 outstanding workshop proposals as oral workshop papers and provide the winning prizes.
-      </p>
-      <h2 class="font-bold text-2xl">Stage3</h2>
-      <p>
-        For outstanding proposals, we will provide essential support and collaboration to create new methodologies
-        proposed in the submissions.
-      </p>
-      <br />
-      <h1 class="text-center font-bold text-4xl">Essential Rules</h1>
-      <br />
-      <p>
-        1. All proposals are judged via double-blind peer-review. If one submission leaks the authors information during
-        review phase, this submission will be desk rejected.
-      </p>
-      <p>
-        2. Each proposal will be evaluated by the judges according to the criteria outlined below. Prizes will be
-        awarded to the proposals which score the best according to the aggregate evaluations of the judges.
-      </p>
-      <p>
-        3. For proposals regarding trustworthy agent environment and benchmarks, if the submission proposes a simulated
-        environment or a dataset, pay attention to the legal aspects of data sourcing to protect the copyright. It's
-        acceptable and recommended to use data that is already freely available; however, make sure that obtaining the
-        data complies with the licensing or usage guidelines set by its originator.
-      </p>
-      <p>
-        4.You are eligible to submit as an individual, on behalf of an organization, from a for-profit or a
-        not-for-profit - we are impartial as to your affiliation (or lack thereof).
-      </p>
-      <p>
-        5.Prizes will be distributed evenly to named lead authors on the paper, unless other instructions are provided.
+        <li>
+          <span class="font-bold"
+            >A large-scale multi-agent playground / environment for social communication simulation.
+          </span>Agents can operate autonomously, utilizing tools [2, 3] or interacting with their environment [4]. For
+          instance, scenarios involving tool use may incorporate extensive external network or database information. In
+          embodied scenarios, agents interact in real-time with real or simulated environments. Traditional evaluations
+          of trustworthy safety in Large Language Models (LLMs) typically focus only on input and output, hence, a more
+          comprehensive assessment method is necessary to evaluate the safety of agents. For example, AgentSmith [5]
+          presents a highly scalable LLM jailbreak environment, which supports up to 1 million agents to run
+          simultaneously. In this work, the authors leverage the proposed environment to demonstrate a simple but
+          critical infectious jailbreak technique, and prove that such safety issues can be infected into all agents
+          within limited interaction rounds. The above environment is a feasible example regarding a multi-agent
+          simulation environment. However, future environments should support more complex interactions among agents and
+          support various simulations for different aspects. These trends still leave blank for participants.
+        </li>
+        <li>
+          <span class="font-bold">A comprehensive trustworthy benchmark for embodied AI agents. </span>The more complex
+          macro-architecture of multi-modal AI agents indicates that the trustworthy evaluation for agents should be
+          revised. For instance, a comprehensive UI-assistant agent safety benchmark should evaluate both the safety
+          capability of each module (controller or planner) inside the agent against adversarial attack hidden in the
+          website or UI of applications, but also evaluate the safety in the collaboration among all modules against the
+          whole attack procedure. Therefore, more advanced evaluation metrics are also worthy to explore. Traditional
+          evaluations of trustworthiness and safety in Multi-modal Foundation Models (MFMs) typically focus only on
+          input and output, hence, a more comprehensive assessment method is necessary to evaluate the safety of agents
+          [5].
+        </li>
+        <br />
+        For instance, SmartPlay [8] presents a comprehensive game AI benchmark for LLM agents. SmartPlay consists of 6 different
+        games, including Rock-Paper-Scissors, Tower of Hanoi, Minecraft. Each game features a unique setting, providing up
+        to 20 evaluation settings and infinite environment variations. The distinction between the set of capabilities each
+        game test allows us to analyze each capability separately. Though this work is not designed for trustworthy agent
+        benchmark or evaluation, one can still follow this insight to think of future benchmarks for trustworthy agents.For
+        example, how to extend current attack success rate to multi agent evaluation, or a comprehensive evaluation benchmark
+        based on existing multi-agent environments.
       </p>
       <br />
+      <h1 class="text-center font-bold text-4xl">Time Schedule (AoE timezone)</h1>
+      <br />
+      <div class="flex justify-center">
+        <table class="bg-white">
+          <tbody>
+            <tr>
+              <td class="w-128 border px-4 py-2">Time (Tentative, wish all TODOs complete on time)</td>
+              <td class="w-128 border px-4 py-2">Event </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">May 28th 00:00 (stage 1 starts) </td>
+              <td class="border px-4 py-2"
+                >Challenge Track 3 starts, submission entry opens During stage 1, participants can submit their
+                proposals in the form of research proposal papers. It will be reviewed by an expert committee.
+              </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">June 16th 23:59 (stage 1 ends, stage 2 starts) </td>
+              <td class="border px-4 py-2"
+                >Submission deadline of track 3, and stage 2 starts. Paper assignment starts, then review all the
+                proposals.
+              </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">June 27th 23:59</td>
+              <td class="border px-4 py-2"
+                >End or review submission. At the end of stage 2, we will select the top 5 outstanding workshop
+                proposals as oral workshop papers and provide the winning prizes during the workshop.
+              </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">June 30th </td>
+              <td class="border px-4 py-2">Release decisions and send decision notification emails. </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">July 4th 23:59 </td>
+              <td class="border px-4 py-2">Camera ready submission deadline. </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">July 27th </td>
+              <td class="border px-4 py-2">Date of Workshop. </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">After workshop (stage 3) </td>
+              <td class="border px-4 py-2"
+                >Stage 3 starts. For outstanding proposals, we will provide essential support and collaboration to
+                create new methodologies proposed in the submissions.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <h1 class="text-center font-bold text-4xl">How Will The Submissions Be Evaluated</h1>
       <br />
       <div class="flex justify-center">
@@ -282,14 +269,11 @@ const headerData = {
         </table>
       </div>
       <br />
-      <h1 class="text-center font-bold text-4xl">Example Format of Proposal Submission</h1>
+      <h1 class="text-center font-bold text-4xl">Example Format</h1>
       <br />
       <p class="font-bold text-2xl">
-        Recommended Format
-        <p></p>
-        <p>No more than 5 pages with ICML latex template (excluding reference and appendix).</p>
-        <p class="font-bold text-2xl">Detailed Example Format</p>
-        <p class="font-bold">I. Introduction (Proposal Description and Motivation)</p>
+        <p class="font-bold">I.Title and Abstract</p>
+        <p class="font-bold">II. Introduction (Proposal Description and Motivation)</p>
         <p>
           - In the introduction section, the most significant thing is to clarify the motivation of your research
           proposal for trustworthy agents. For example, which phenomenon or observation motivates you to propose this
@@ -307,14 +291,14 @@ const headerData = {
           research that generally help to assess or reduce the risks. Nevertheless, submissions will be judged according
           to their relevance to risks from AI agents, not limited to these categories.
         </p>
-        <p class="font-bold">II. Related Works (previous attempts regarding AI agents and trustworthy AI)</p>
+        <p class="font-bold">III. Related Works (previous attempts regarding AI agents and trustworthy AI)</p>
         <p>
           - In this section, the authors could review previous attempts regarding both AI agents and trustworthy
           foundation models (e.g, attack, defense, monitoring, and governance). Then explain how your proposal (a system
           or a benchmark) is similar to or different from previous counterparts. Good research proposals often tie into
           existing work to gain widespread adoption while inspiring novel future research.
         </p>
-        <p class="font-bold">III. Technical Details</p>
+        <p class="font-bold">IV. Technical Details(Recommended)</p>
         <p>
           - In this section, the authors should illustrate all the implementation details for your proposal, and prove
           that the proposal is practical and can be conducted.
@@ -329,15 +313,7 @@ const headerData = {
           environment), we recommend to illustrate comprehensive analysis (e.g., leaderboard) for existing agent
           solutions / applications.
         </p>
-        <p>
-          - If your proposal focuses on a detailed trustworthy AI agent framework, we recommend to state the baseline,
-          the improvement methods and corresponding implementation details.
-        </p>
-        <p>
-          - All the other related topics are also encouraged. Similar to previous examples, we require the authors to
-          provide corresponding technical details.
-        </p>
-        <p class="font-bold">IV. Preliminary or Major Experimental Results (Optional, if available)</p>
+        <p class="font-bold">V. Preliminary or Major Experimental Results (Optional, if available)</p>
         <p>
           - If you have tried your proposed proposals for trustworthy agents, we strongly encourage you to show the key
           preliminary or major results of your proposed agent environment / benchmark / solution.
@@ -349,7 +325,7 @@ const headerData = {
           baseline methods. And for trustworthy agent environments, one can illustrate critical qualitative results to
           show the effectiveness of the proposed environments.
         </p>
-        <p class="font-bold">V.Conclusion and Relevance to Future Work</p>
+        <p class="font-bold">VI.Conclusion and Relevance to Future Work</p>
         <p>
           - Current tractability analysis. Benchmarks should currently or soon be tractable for existing models while
           posing a meaningful challenge. A significant research effort should be required to achieve near-maximum
@@ -374,10 +350,119 @@ const headerData = {
         <p>
           6.Do researchers need to learn a new program or programming language to use the dataset (e.g., Coq, AnyLogic)?
         </p>
-        <p class="font-bold">VI. Reference</p>
+        <p class="font-bold">VII. Reference</p>
         <p>- as usual.</p>
       </p>
+    </Fragment>
+  </Content>
+  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+    <Fragment slot="title"> Submission Guideline </Fragment>
+    <Fragment slot="content">
+      <p>
+        Authors are invited to submit short papers with up to 5 pages, but an unlimited number of pages for references
+        and appendices (after the bibliography). However, reviewers are not required to read the appendix. We will
+        select the top 5 outstanding challenge proposals as oral presentations and provide the winning prizes.
+        Outstanding papers will be published publicly using OpenReview.
+      </p>
+      <p>
+        The reviewing process will be double-blind. Please submit anonymized versions of your paper that include no
+        identifying information about any author identities or affiliations. Submitted papers must be new work that has
+        not yet been published in a peer-reviewed conference or journal. During submission, we will provide a checkbox
+        to note whether at least one author can join the onsite workshop. These submissions will receive expedited
+        reviews to provide enough time for visa applications.
+      </p>
+      <p>
+        Submission format: <a
+          href="https://media.icml.cc/Conferences/ICML2024/Styles/icml2024.zip"
+          style="text-decoration:underline">ICML Style Files</a
+        >(In review stage, please use anonymous version, and for camera ready proposals, please use the final version
+        and note the authors.)
+      </p>
+      <p>
+        Submission link: <a
+          href="https://openreview.net/group?id=ICML.cc/2024/Workshop/TiFA_Challenge"
+          style="text-decoration:underline">OpenReview</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+    <Fragment slot="title">Policies</Fragment>
+    <Fragment slot="content">
       <br />
+      <h1 class="text-center font-bold text-4xl">Participants:</h1>
+      <br />
+      <p>
+        You are eligible to submit as an individual, on behalf of an organization, from a for-profit or a not-for-profit
+        - we are impartial as to your affiliation (or lack thereof).
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Deadlines:</h1>
+      <br />
+      <p>Proposal submission deadlines are strict. In no circumstances will extensions be given.</p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Double-Blind Review (For Agent Trustworthy Track):</h1>
+      <br />
+      <p>
+        All submissions must be anonymized and may not contain any information with the intention or consequence of
+        violating the double-blind reviewing policy, including (but not limited to) citing previous works of the authors
+        or sharing links in a way that can infer any author’s identity or institution, actions that reveal the
+        identities of the authors to potential reviewers.
+      </p>
+      <p>
+        Authors are allowed to post versions of their work on preprint servers such as arXiv. They are also allowed to
+        give talks to restricted audiences on the work(s) submitted to our challenge during the review. If you have
+        posted or plan to post a non-anonymized version of your paper online before the ICML decisions are made, the
+        submitted version must not refer to the non-anonymized version.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Dual Submission :</h1>
+      <br />
+      <p>
+        It is not appropriate to submit research proposals that are identical (or substantially similar) to versions
+        that have been previously published, accepted for publication, or submitted in parallel to other conferences or
+        journals. Such submissions violate our dual submission policy, and the organizers have the right to reject such
+        submissions, or to remove them from the proceedings. Note that submissions that have been or are being presented
+        at workshops do not violate the dual-submission policy, as long as there’s no associated archival publication.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Reviewing Criteria :</h1>
+      <br />
+      <p>
+        Each proposal will be evaluated by the judges according to the criteria outlined below. Prizes will be awarded
+        to the proposals which score the best according to the aggregate evaluations of the judges. Accepted research
+        proposals must be based on original research and must contain novel results of significant interest to the
+        machine learning community. Results can be either theoretical or empirical. Results will be judged on the degree
+        to which they have been objectively established and/or their potential for scientific and technological impact.
+        Reproducibility of results and easy availability of code will be taken into account in the decision-making
+        process whenever appropriate.
+      </p>
+      <br />
+      <h1 class="text-center font-bold text-4xl">Ethics:</h1>
+      <br />
+      <p>See the general policy of this challenge for details.</p>
+      <br /><br />
+      <br />
+      <h1 class="text-center font-bold text-4xl">Reference:</h1>
+      <br />
+      <div class="text-s">
+        <!-- 添加了Tailwind的类来设置整体字体大小 -->
+        <ul>
+          <li>[1] CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society</li>
+          <li>[2] MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework</li>
+          <li>[3] AutoGPT: <a href="https://github.com/Significant-Gravitas/AutoGPT" class="underline">AutoGPT</a></li>
+          <li>[4] RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control</li>
+          <li>
+            [5] Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast. <a
+              href="https://arxiv.org/abs/2402.08567"
+              class="underline">arXiv preprint arXiv:2402.08567</a
+            >.
+          </li>
+          <li>[6] PaLM-E: An Embodied Multimodal Language Model</li>
+          <li>[7] Octopus: Embodied Vision-Language Programmer from Environmental Feedback</li>
+          <li>[8] SMARTPLAY : A BENCHMARK FOR LLMS AS INTELLI- GENT AGENTS</li>
+        </ul>
+      </div>
     </Fragment>
   </Content>
 
@@ -403,6 +488,12 @@ const headerData = {
       {
         title: 'May I submit a paper that has been published in conferences or journals?',
         description: 'No.',
+        icon: 'tabler:help-octagon',
+      },
+      {
+        title: 'Other Questions?',
+        description:
+          'Please contact tifaattack9@gmail.com to ask your questions, we will respond in time. Non-overlapped questions and corresponding responses will be updated into FAQs.',
         icon: 'tabler:help-octagon',
       },
     ]}
