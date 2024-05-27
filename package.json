@@ -20,8 +20,11 @@
     "@fontsource-variable/inter": "^5.0.17",
     "astro": "^4.5.12",
     "astro-icon": "^1.1.0",
+    "highlight.js": "^11.9.0",
+    "katex": "^0.16.10",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "marked": "^12.0.2",
     "typescript-esbuild": "^0.4.9",
     "unpic": "^3.18.0"
   },

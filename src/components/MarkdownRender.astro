@@ -1,0 +1,54 @@
+---
+// Import necessary libraries
+import { marked } from 'marked';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
+
+// Props for the component
+const { content } = Astro.props;
+
+// Function to highlight code
+const highlight = (code, lang) => {
+  if (hljs.getLanguage(lang)) {
+    return hljs.highlight(lang, code).value;
+  } else {
+    return hljs.highlightAuto(code).value;
+  }
+};
+
+// Convert markdown content to HTML
+const compiledMarkdown = marked(content, {
+  highlight,
+});
+---
+
+<style>
+pre {
+  background: #f5f6f5;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+.inline-code {
+  border: 1px solid #dee0e3;
+  border-radius: 4px;
+  background-color: #f5f6f7;
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', 'Microsoft Yahei';
+  font-size: 16px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+p {
+  line-height: 26px;
+}
+code, kbd, pre, samp {
+  font-family: SFMono-Regular, Menlo;
+  line-height: 20px;
+}
+span {
+  line-height: 22px;
+}
+</style>
+
+<!-- Render the compiled markdown -->
+<div innerHTML={compiledMarkdown}></div>
