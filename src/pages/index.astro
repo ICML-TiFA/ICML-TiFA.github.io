@@ -43,8 +43,10 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="content">
-      <br>
-      <span class="text-white">🎉🎉🎉Our challenge is open for submission. Click<a href="/challenges">【here】</a>for details.🎉🎉🎉</span>
+      <br />
+      <span class="text-white"
+        >🎉🎉🎉Our challenge is open for submission. Click<a href="/challenges">【here】</a>for details.🎉🎉🎉</span
+      >
     </Fragment>
   </Hero2>
 
@@ -150,19 +152,28 @@ const metadata = {
           >.
         </li>
         <li>
-          Submissions should be anonymised papers up to 5 pages (appendices can be added to the main PDF); excluding
+          Submissions are non-archival. We are happy to receive submissions that are also undergoing peer review
+          elsewhere at the time of submission, but we will not accept submissions that have already been previously
+          published or accepted for publication at peer-reviewed conferences or journals. Submission is permitted for
+          papers presented or to be presented at other non-archival venues (e.g. other workshops)
+        </li>
+        <li>
+          <!-- Submissions should be anonymised papers up to 5 pages (appendices can be added to the main PDF); excluding
           references. Authors are required to include a "Social Impacts Statement" that highlights "potential broader
-          impact of their work, including its ethical aspects and future societal consequences". You must format your
-          submission using the <a
+          impact of their work, including its ethical aspects and future societal consequences".  -->
+          <p>
+            - Authors are required to include a "Social Impacts Statement" that highlights "potential broader impact of
+            their work, including its ethical aspects and future societal consequences".
+          </p>
+          <p>
+            - Submissions should be anonymised papers up to 5 pages (appendices can be added to the main PDF); excluding
+            references and Social Impacts Statement.
+          </p>
+          - You must format your submission using the <a
             href="https://media.icml.cc/Conferences/ICML2024/Styles/icml2024.zip"
             class="hover:underline text-sky-600 font-medium"
             target="_blank">ICML_LATEX_style_file</a
           >. Reviews will be double-blind, with at least two reviewers assigned to each paper.
-        </li>
-        <li>
-          We welcome various types of papers including scientific papers and position papers. Scientific papers must not
-          have appeared at an archival venue before, However, non-scientific papers that have appeared in archival
-          venues outside main machine learning venues are welcomed for submission.
         </li>
         <li>
           All accepted papers will be available on the workshop website, but no formal workshop proceedings will be
@@ -552,11 +563,11 @@ const metadata = {
         bioLink: 'https://zycheiheihei.github.io/',
       },
       {
-        src:'/organizer12.png',
-        alt:'organizer12',
-        name:'Bowen Dong',
-        university:'HK PolyU',
-        bioLink:'https://m1saka.moe/resume/'
+        src: '/organizer12.png',
+        alt: 'organizer12',
+        name: 'Bowen Dong',
+        university: 'HK PolyU',
+        bioLink: 'https://m1saka.moe/resume/',
       },
       {
         src: '/organizer07.png',
@@ -613,40 +624,40 @@ const metadata = {
     </Fragment></Brands
   >
   <Brands
-  id="Challenge-Organizer"
-  title="Challenge Organizer"
-  icons={[]}
-  images={[
-    {
-      src:'/organizer14.png',
-      alt:'organizer14',
-      name:'Enshen Zhou',
-      university:'BUAA',
-      bioLink:'https://scholar.google.com/citations?user=8Wd7-NAAAAAJ&hl=en'
-    },
-    {
-      src:'/organizer13.png',
-      alt:'organizer13',
-      name:'Zhelun Shi',
-      university:'BUAA',
-      bioLink:'https://scholar.google.com/citations?user=EDLcoVkAAAAJ&hl=zh-CN'
-    },
-    {
-      src:'/organizer16.png',
-      alt:'organizer16',
-      name:'Dongrui Liu',
-      university:'Shanghai AI Lab',
-      bioLink:'https://shenqildr.github.io/'
-    },
-    {
-      src:'/organizer15.png',
-      alt:'organizer15',
-      name:'Hao Li',
-      university:'BUAA',
-      bioLink:'https://scholar.google.com/citations?user=iZcvrH8AAAAJ'
-    },
-  ]}
-/>
+    id="Challenge-Organizer"
+    title="Challenge Organizer"
+    icons={[]}
+    images={[
+      {
+        src: '/organizer14.png',
+        alt: 'organizer14',
+        name: 'Enshen Zhou',
+        university: 'BUAA',
+        bioLink: 'https://scholar.google.com/citations?user=8Wd7-NAAAAAJ&hl=en',
+      },
+      {
+        src: '/organizer13.png',
+        alt: 'organizer13',
+        name: 'Zhelun Shi',
+        university: 'BUAA',
+        bioLink: 'https://scholar.google.com/citations?user=EDLcoVkAAAAJ&hl=zh-CN',
+      },
+      {
+        src: '/organizer16.png',
+        alt: 'organizer16',
+        name: 'Dongrui Liu',
+        university: 'Shanghai AI Lab',
+        bioLink: 'https://shenqildr.github.io/',
+      },
+      {
+        src: '/organizer15.png',
+        alt: 'organizer15',
+        name: 'Hao Li',
+        university: 'BUAA',
+        bioLink: 'https://scholar.google.com/citations?user=iZcvrH8AAAAJ',
+      },
+    ]}
+  />
 
   <!-- Brands Widget ****************** -->
 
