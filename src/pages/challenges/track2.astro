@@ -4,15 +4,8 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 // import Timeline from '~/components/ui/Timeline.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-// import Brands from '~/components/widgets/Brands.astro';
-// import Timezone from '~/components/widgets/Timezone.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Track2 from '~/components/widgets/Track2.astro';
-import Track3 from '~/components/widgets/Track3.astro';
-import Track1 from '~/components/widgets/Track1.astro';
 import { getPermalink } from '~/utils/permalinks';
-// import Sponsor from '~/components/widgets/Sponsor.astro';
 
 const metadata = {
   title: 'Challenges',
@@ -44,9 +37,7 @@ const headerData = {
   <Fragment slot="header">
     <Header {...headerData} isSticky />
   </Fragment>
-
-  <!-- Hero2 Widget ******************* -->
-
+  
   <Hero tagline="ICML 2024 Workshop">
     <Fragment slot="title">Track II - Frontiers in Trustworthy Agents</Fragment>
     <Fragment slot="subtitle"
@@ -55,8 +46,22 @@ const headerData = {
   </Hero>
 
   <!-- Content Widget **************** -->
-
-  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+  <div class="flex">
+    <aside class="sticky left-0 top-0 h-full p-4 z-0 bg-white">
+      <nav class="mt-16">
+        <ul class="space-y-2">
+          <li><a href="#Introduction" class="text-blue-600 font-bold">Introduction</a></li>
+          <li><a href="#TimeSchedule" class="text-blue-600 font-bold">Time Schedule</a></li>
+          <li><a href="#Evaluation" class="text-blue-600 font-bold">How Will The Submissions Be Evaluated</a></li>
+          <li><a href="#ExampleFormat" class="text-blue-600 font-bold">Example Format</a></li>
+          <li><a href="#SubmissionGuideline" class="text-blue-600 font-bold">Submission Guideline</a></li>
+          <li><a href="#Policies" class="text-blue-600 font-bold">Policies</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- Hero2 Widget ******************* -->
+    <div class=" flex-1">
+  <Content id="Introduction" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
     <!-- <Fragment slot="bg">
         <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment> -->
@@ -164,11 +169,13 @@ const headerData = {
         example, how to extend current attack success rate to multi agent evaluation, or a comprehensive evaluation benchmark
         based on existing multi-agent environments.
       </p>
-      <br />
-      <br>
-      <h1 class="text-center font-bold text-4xl">Time Schedule (AoE timezone)</h1>
-      <br />
-      <br>
+      
+      
+    </Fragment>
+  </Content>
+  <Content classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }} id="TimeSchedule">
+    <Fragment slot="title">Time Schedule (AoE timezone)</Fragment>
+    <Fragment slot="content">
       <div class="flex justify-center">
         <table class="bg-white">
           <tbody>
@@ -219,9 +226,64 @@ const headerData = {
           </tbody>
         </table>
       </div>
-      <br>
-      <h1 class="text-center font-bold text-4xl">How Will The Submissions Be Evaluated</h1>
-      <br />
+    </Fragment>
+  </Content>
+  <!-- <h1 class="text-center font-bold text-4xl" id="TimeSchedule">Time Schedule (AoE timezone)</h1>
+  <br />
+  <br>
+  <div class="flex justify-center">
+    <table class="bg-white">
+      <tbody>
+        <tr>
+          <td class="w-128 border px-4 py-2">Time (Tentative, wish all TODOs complete on time)</td>
+          <td class="w-128 border px-4 py-2">Event </td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">May 28th 00:00 (stage 1 starts) </td>
+          <td class="border px-4 py-2"
+            >Challenge Track 3 starts, submission entry opens During stage 1, participants can submit their
+            proposals in the form of research proposal papers. It will be reviewed by an expert committee.
+          </td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">June 16th 23:59 (stage 1 ends, stage 2 starts) </td>
+          <td class="border px-4 py-2"
+            >Submission deadline of track 3, and stage 2 starts. Paper assignment starts, then review all the
+            proposals.
+          </td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">June 27th 23:59</td>
+          <td class="border px-4 py-2"
+            >End or review submission. At the end of stage 2, we will select the top 5 outstanding workshop
+            proposals as oral workshop papers and provide the winning prizes during the workshop.
+          </td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">June 30th </td>
+          <td class="border px-4 py-2">Release decisions and send decision notification emails. </td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">July 4th 23:59 </td>
+          <td class="border px-4 py-2">Camera ready submission deadline. </td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">July 27th </td>
+          <td class="border px-4 py-2">Date of Workshop. </td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border px-4 py-2">After workshop (stage 3) </td>
+          <td class="border px-4 py-2"
+            >Stage 3 starts. For outstanding proposals, we will provide essential support and collaboration to
+            create new methodologies proposed in the submissions.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+  <Content classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }} id="Evaluation">
+    <Fragment slot="title">How Will The Submissions Be Evaluated</Fragment>
+    <Fragment slot="content">
       <div class="flex justify-center">
         <table class="bg-white">
           <tbody>
@@ -271,9 +333,12 @@ const headerData = {
           </tbody>
         </table>
       </div>
-      <br />
-      <h1 class="text-center font-bold text-4xl">Example Format</h1>
-      <br />
+    </Fragment>
+  </Content>
+ 
+  <Content classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }} id="ExampleFormat">
+    <Fragment slot="title">Example Format</Fragment>
+    <Fragment slot="content">
       <p class="font-bold text-2xl">
         <p class="font-bold">I.Title and Abstract</p>
         <p class="font-bold">II. Introduction (Proposal Description and Motivation)</p>
@@ -358,7 +423,7 @@ const headerData = {
       </p>
     </Fragment>
   </Content>
-  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }} id="SubmissionGuideline">
     <Fragment slot="title"> Submission Guideline </Fragment>
     <Fragment slot="content">
       <p>
@@ -389,7 +454,7 @@ const headerData = {
       </p>
     </Fragment>
   </Content>
-  <Content id="Overview" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+  <Content id="Policies" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
     <Fragment slot="title">Policies</Fragment>
     <Fragment slot="content">
       <br />
@@ -501,6 +566,8 @@ const headerData = {
       },
     ]}
   />
+    </div>
+  </div>
 </Layout>
 
 <style></style>
