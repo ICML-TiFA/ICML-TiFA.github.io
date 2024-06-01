@@ -12,10 +12,11 @@ const { title = '', subtitle = '', tagline = '', id } = Astro.props;
   <div class="max-w-7xl mx-auto pt-8" id={id}>
     <Headline title={title} subtitle={subtitle} tagline={tagline} />
     <div class="flex gap-8 justify-center">
-      <Button variant="secondary" href={'#'}>
+      <!-- <Button variant="secondary" href={'#'}>
         <span class="mr-2">{'Issues'}</span>
         <Icon name="tabler:chevron-right" class="w-6 h-6" />
-      </Button><Button variant="secondary">
+      </Button> -->
+      <Button variant="secondary">
         <span class="mr-2">{'Submission'}</span>
         <Icon name="tabler:ban" class="w-6 h-6" />
       </Button>
