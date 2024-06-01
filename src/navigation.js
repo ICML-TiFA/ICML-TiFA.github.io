@@ -23,7 +23,7 @@ export const headerData = {
       href: getPermalink('/#Steering-Committee'),
     },
     {
-      text:'challenge',
+      text:'Challenge',
       href:'/challenges'
     }
   ],
