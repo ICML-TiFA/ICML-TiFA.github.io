@@ -183,7 +183,7 @@ const renderedFormula = katex.renderToString(formula, {
         each image_list can contain either a single image or multiple images. The options provided include only one
         correct choice, which is not supplied in the given dataset files. Participants are expected to edit and modify
         the images and queries. Upon submission, the system will automatically run Llava-1.5 inference and evaluate the
-        accuracy based on the correct option. The goal for participants is to achieve the highest attack rate. After
+        accuracy based on the correct option. The goal for participants is to achieve the highest attack rate. For helpful and honest data, he final choice of LLaVA will be determined by the perplexity (PPL) of each choice. For harmless problems, the generated answers will be judged by MD-Judge. After
         registration, our data will be provided.
       </p>
       <br />
@@ -239,7 +239,7 @@ const renderedFormula = katex.renderToString(formula, {
         >.
       </p>
       <br />
-      <h1 class="text-center font-bold text-4xl">Evaluation:</h1>
+      <h1 class="text-center font-bold text-4xl">Evaluation</h1>
       <br />
       <p>
         <div class="bg-white p-6 rounded-lg">
@@ -341,15 +341,15 @@ const renderedFormula = katex.renderToString(formula, {
         <table class="bg-white">
           <tbody>
             <tr>
-              <td class="w-64 border px-4 py-2">Outstanding Champion</td>
+              <td class="w-64 border px-4 py-2">Champion</td>
               <td class="w-64 border px-4 py-2">USD TBD</td>
             </tr>
             <tr class="bg-gray-50">
-              <td class="border px-4 py-2">Honorable Runner-up</td>
+              <td class="border px-4 py-2">First-Runner-up</td>
               <td class="border px-4 py-2">USD TBD</td>
             </tr>
             <tr class="bg-gray-50">
-              <td class="border px-4 py-2">Innovation Award</td>
+              <td class="border px-4 py-2">Second-Runner-up</td>
               <td class="border px-4 py-2">USD TBD</td>
             </tr>
           </tbody>
