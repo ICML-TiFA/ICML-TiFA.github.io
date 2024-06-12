@@ -280,12 +280,12 @@ const renderedFormula = katex.renderToString(formula, {
             <li class="mt-4">
               <strong>Input Similarity:</strong> A key aspect of the challenge is maintaining a semblance of similarity between
               the original and modified inputs. This ensures that the attack remains subtle and tests the model's ability
-              to detect nuanced alterations. The minimum similarity of both image similarity and text similarity should be
+              to detect nuanced alterations. The minimum cosine similarity of both image similarity and text similarity should be
               <strong>higher than 0.9</strong>. Similarity lower than 0.9 would not be counted. The image similarity is
               calculated based on the outputs of the last layer extracted by <span class="inline-code" class="font-16px"> Resnet-50</span
               > of torchvision.models and the text similarity is computed by the [CLS] token from the last layer of<span
                 class="inline-code"
-                ><a href="https://huggingface.co/google-bert/bert-base-uncased" style="text-decoration:underline" class="font-16px"
+                ><a href="https://huggingface.co/google-bert/bert-base-uncased" style="text-decoration:underline" class="inline-code"
                   >Bert-base</a
                 ></span
               >.
@@ -434,7 +434,7 @@ const renderedFormula = katex.renderToString(formula, {
       border-radius: 4px;
       background-color: #f5f6f7;
       font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', 'Microsoft Yahei';
-      font-size: 14px; /* 缩小字体大小 */
+      font-size: 16px; /* 缩小字体大小 */
       padding-left: 2px;
       padding-right: 2px;
     }
