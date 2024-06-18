@@ -283,7 +283,7 @@ const renderedFormula = katex.renderToString(formula, {
               to detect nuanced alterations. The minimum cosine similarity of both image similarity and text similarity should be
               <strong>higher than 0.9</strong>. Similarity lower than 0.9 would not be counted. The image similarity is
               calculated based on the outputs of the last layer extracted by <span class="inline-code" class="font-16px"> Resnet-50</span
-              > of torchvision.models and the text similarity is computed by the [CLS] token from the last layer of<span
+              > of torchvision.models(preprocessing contains resizing image to 224, then converting it to tensor and normalizing it with the mean and std in the <a href="https://pytorch.org/vision/main/models/generated/torchvision.models.resnet50.html" style="text-decoration:underline">link</a>) and the text similarity is computed by the [CLS] token from the last layer of<span
                 class="inline-code"
                 ><a href="https://huggingface.co/google-bert/bert-base-uncased" style="text-decoration:underline" class="inline-code"
                   >Bert-base</a
