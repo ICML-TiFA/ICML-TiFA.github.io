@@ -39,7 +39,9 @@ const metadata = {
 
     <Fragment slot="subtitle">
       ICML 2024 @ Vienna, Austria, Jul 27 Sat
-      <br /><span class="text-slate-300">The final decisions on paper acceptance have been released. Please check your OpenReview account.</span>
+      <br /><span class="text-slate-300"
+        >The final decisions on paper acceptance have been released. Please check your OpenReview account.</span
+      >
     </Fragment>
 
     <Fragment slot="content">
@@ -145,6 +147,7 @@ const metadata = {
     <Fragment slot="content" classes={{ container: 'py-2' }}
       ><ul class="list-outside list-disc">
         <li>
+          <span class="font-bold">Submission site:</span>
           Submissions should be made on <a
             href="https://openreview.net/group?id=ICML.cc/2024/Workshop/TiFA"
             class="hover:underline text-sky-600 font-medium"
@@ -152,32 +155,40 @@ const metadata = {
           >.
         </li>
         <li>
-          Submissions are non-archival. We are happy to receive submissions that are also undergoing peer review
-          elsewhere at the time of submission, but we will not accept submissions that have already been previously
-          published or accepted for publication at peer-reviewed conferences or journals. Submission is permitted for
-          papers presented or to be presented at other non-archival venues (e.g. other workshops)
+          <span class="font-bold">Submission are non-archival:</span>
+          we receive submissions that are also undergoing peer review elsewhere at the time of submission, but we will not
+          accept submissions that have already been previously published or accepted for publication at peer-reviewed conferences
+          or journals. Submission is permitted for papers presented or to be presented at other non-archival venues (e.g.
+          other workshops). No formal workshop proceedings will be published.
         </li>
         <li>
-          <!-- Submissions should be anonymised papers up to 5 pages (appendices can be added to the main PDF); excluding
-          references. Authors are required to include a "Social Impacts Statement" that highlights "potential broader
-          impact of their work, including its ethical aspects and future societal consequences".  -->
-          <p>
-            - Authors are required to include a "Social Impacts Statement" that highlights "potential broader impact of
-            their work, including its ethical aspects and future societal consequences".
-          </p>
-          <p>
-            - Submissions should be anonymised papers up to 5 pages (appendices can be added to the main PDF); excluding
-            references and Social Impacts Statement.
-          </p>
-          - You must format your submission using the <a
+          <span class="font-bold">Social Impact Statement: </span>
+          authors are required to include a "Social Impact Statement" that highlights "potential broader impact of their
+          work, including its ethical aspects and future societal consequences".
+        </li>
+        <li>
+          <span class="font-bold">Submission Length and Format: </span>
+          Submissions should be anonymised papers up to 5 pages (appendices can be added to the main PDF); excluding references
+          and Social Impacts Statement. You must format your submission using the <a
             href="https://media.icml.cc/Conferences/ICML2024/Styles/icml2024.zip"
             class="hover:underline text-sky-600 font-medium"
-            target="_blank">ICML_LATEX_style_file</a
-          >. Reviews will be double-blind, with at least two reviewers assigned to each paper.
+            target="_blank">ICML_2024_LaTeX_style_file</a
+          >.
         </li>
         <li>
-          All accepted papers will be available on the workshop website, but no formal workshop proceedings will be
-          published.
+          <span class="font-bold">Paper Review: </span>
+          All reviews are double-blinded, with at least two reviewers assigned to each paper.
+        </li>
+        <li>
+          <span class="font-bold">Camera Ready Instructions: </span>
+          The camera ready version is composed of a main body, which can be up to <span class="font-bold">6 pages long</span>, followed by unlimited pages
+          for a Social Impact Statement, references and an appendix, all in a single file. The camera-ready versions of all
+          accepted submissions should be uploaded by the authors to the <a
+            href="https://openreview.net/group?id=ICML.cc/2024/Workshop/TiFA"
+            class="hover:underline text-sky-600 font-medium"
+            target="_blank">OpenReview page</a
+          > for corresponding submissions. The camera ready version will be publicly available to everyone on the Camera-Ready
+          Deadline displayed below.
         </li>
       </ul>
     </Fragment>
@@ -211,7 +222,9 @@ const metadata = {
             </tr>
             <tr>
               <td class="border px-4 py-2">Acceptance Notification</td>
-              <td class="border px-4 py-2"><span style="text-decoration:line-through">June 17, 2024</span>June 19, 2024</td>
+              <td class="border px-4 py-2"
+                ><span style="text-decoration:line-through">June 17, 2024</span>June 19, 2024</td
+              >
             </tr>
             <tr class="bg-gray-50">
               <td class="border px-4 py-2">Camera-Ready Deadline</td>
@@ -657,13 +670,13 @@ const metadata = {
         bioLink: 'https://scholar.google.com/citations?user=iZcvrH8AAAAJ',
       },
       {
-        src:'/white.png',
+        src: '/white.png',
       },
       {
-        src:'/white.png',
-      }
+        src: '/white.png',
+      },
     ]}
-  ></Brands>
+  />
 
   <!-- Brands Widget ****************** -->
 
