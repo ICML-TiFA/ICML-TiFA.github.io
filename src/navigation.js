@@ -11,17 +11,17 @@ export const headerData = {
       href: getPermalink('/#Submission-Guide'),
     },
     {
-      text: 'OC',
+      text: 'People',
       href: getPermalink('/#Organizers'),
     },
-    {
-      text:'CO',
-      href:getPermalink('/#Challenge-Organizer')
-    },
-    {
-      text: 'SC',
-      href: getPermalink('/#Steering-Committee'),
-    },
+    // {
+    //   text:'CO',
+    //   href:getPermalink('/#Challenge-Organizer')
+    // },
+    // {
+    //   text: 'SC',
+    //   href: getPermalink('/#Steering-Committee'),
+    // },
     {
       text:'Challenge',
       href:'/challenges'
