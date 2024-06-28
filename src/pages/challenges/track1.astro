@@ -126,6 +126,101 @@ const renderedFormula = katex.renderToString(formula, {
   <Hero tagline="ICML 2024 Workshop">
     <Fragment slot="title">Track I - MLLM Attack</Fragment>
   </Hero>
+  <Content id="news" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+    <Fragment slot="title">News</Fragment>
+    <Fragment slot="content">
+      <h1 class="text-center font-bold text-2xl">
+        - 27 June 2024: Results are publicly announced and leaderboards are open
+      </h1>
+      <br>
+      <h1 class="text-center font-bold text-4xl">
+       LeaderBoards
+      </h1>
+      <br>
+      <div class="flex justify-center">
+        <table class="bg-white">
+          <tbody>
+            <tr>
+              <td class="w-64 border px-4 py-2">RANK</td>
+              <td class="w-64 border px-4 py-2">TEAM NAME</td>
+              <td class="w-64 border px-4 py-2">Affiliation</td>
+              <td class="w-64 border px-4 py-2">IMAGE SIMILARITY SCORE</td>
+              <td class="w-64 border px-4 py-2">TEXT SIMILARITY SCORE</td>
+              <td class="w-64 border px-4 py-2">ATTACK RATE@HELPFUL</td>
+              <td class="w-64 border px-4 py-2">ATTACK RATE@HONEST</td>
+              <td class="w-64 border px-4 py-2">ATTACK RATE@HARMLESS</td>
+              <td class="w-64 border px-4 py-2">ATTACK RATE@TOTAL s</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="w-64 border px-4 py-2">1</td>
+              <td class="w-64 border px-4 py-2">NUSafe</td>
+              <td class="w-64 border px-4 py-2">National University of Singapore</td>
+              <td class="w-64 border px-4 py-2">0.93</td>
+              <td class="w-64 border px-4 py-2">0.94</td>
+              <td class="w-64 border px-4 py-2">80.92</td>
+              <td class="w-64 border px-4 py-2">69.54</td>
+              <td class="w-64 border px-4 py-2">39.27</td>
+              <td class="w-64 border px-4 py-2">60.47</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="w-64 border px-4 py-2">2</td>
+              <td class="w-64 border px-4 py-2">XJTU-AISEC</td>
+              <td class="w-64 border px-4 py-2">Xi'an Jiaotong University</td>
+              <td class="w-64 border px-4 py-2">0.95</td>
+              <td class="w-64 border px-4 py-2">1</td>
+              <td class="w-64 border px-4 py-2">75.57</td>
+              <td class="w-64 border px-4 py-2">68.87</td>
+              <td class="w-64 border px-4 py-2">38.22</td>
+              <td class="w-64 border px-4 py-2">58.35</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="w-64 border px-4 py-2">3</td>
+              <td class="w-64 border px-4 py-2">tue-ml</td>
+              <td class="w-64 border px-4 py-2">University of Tübingen</td>
+              <td class="w-64 border px-4 py-2">0.98</td>
+              <td class="w-64 border px-4 py-2">0.94</td>
+              <td class="w-64 border px-4 py-2">58.78</td>
+              <td class="w-64 border px-4 py-2">64.9</td>
+              <td class="w-64 border px-4 py-2">38.22</td>
+              <td class="w-64 border px-4 py-2">52.43</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="w-64 border px-4 py-2">4</td>
+              <td class="w-64 border px-4 py-2">Blackfyre</td>
+              <td class="w-64 border px-4 py-2">Wuhan University</td>
+              <td class="w-64 border px-4 py-2">1</td>
+              <td class="w-64 border px-4 py-2">1</td>
+              <td class="w-64 border px-4 py-2">48.09</td>
+              <td class="w-64 border px-4 py-2">62.25</td>
+              <td class="w-64 border px-4 py-2">38.22</td>
+              <td class="w-64 border px-4 py-2">48.63</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="w-64 border px-4 py-2">5</td>
+              <td class="w-64 border px-4 py-2">Renaissance</td>
+              <td class="w-64 border px-4 py-2">Nanyang Technological University</td>
+              <td class="w-64 border px-4 py-2">0.97</td>
+              <td class="w-64 border px-4 py-2">1</td>
+              <td class="w-64 border px-4 py-2">47.33</td>
+              <td class="w-64 border px-4 py-2">62.25</td>
+              <td class="w-64 border px-4 py-2">38.22</td>
+              <td class="w-64 border px-4 py-2">48.41</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="w-64 border px-4 py-2">6</td>
+              <td class="w-64 border px-4 py-2">RethinkAdv</td>
+              <td class="w-64 border px-4 py-2">Fudan University</td>
+              <td class="w-64 border px-4 py-2">0.92</td>
+              <td class="w-64 border px-4 py-2">0.95</td>
+              <td class="w-64 border px-4 py-2">51.91</td>
+              <td class="w-64 border px-4 py-2">62.91</td>
+              <td class="w-64 border px-4 py-2">34.03</td>
+              <td class="w-64 border px-4 py-2">48.2</td>
+            </tr>
+          </tbody>
+        </table>
+    </Fragment>
+  </Content>
 
   <!-- Content Widget **************** -->
 
@@ -338,7 +433,7 @@ const renderedFormula = katex.renderToString(formula, {
       <h1 class="text-center font-bold text-4xl">Technical report guideline</h1>
       <br />
       <p>
-        The top 5 teams should submit a technical report of 2-6 pages inclusive of any references, detailing their
+        The top 3 teams should submit a technical report of 2-6 pages inclusive of any references, detailing their
         solution to the OpenReview challenge venue (TBD). Authors are required to include a
         <span class="font-bold">"Social Impacts Statement"</span>
         that highlights potential broader impact of their work, including its ethical aspects and future societal consequences.
