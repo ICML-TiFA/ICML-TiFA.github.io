@@ -11,7 +11,7 @@ import Layout from '~/layouts/PageLayout.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
 import Button from '~/components/ui/Button.astro';
 // import Sponsor from '~/components/widgets/Sponsor.astro';
-
+import Timezone from '~/components/widgets/Timezone.astro';
 const metadata = {
   title: 'ICML TiFA Workshop',
 };
@@ -83,6 +83,191 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content> -->
+  <Content id="Schedule">
+    <Fragment slot="content">
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2 text-center">
+        Schedule<br />
+      </h3>
+      <Timezone
+        items={[
+          {
+            time: '2024-07-27T09:00:00+02:00',
+            theme: {
+              title: 'Opening Remarks (10 min)',
+              // subtitles: ['LoremLoremLoremLorem', 'LoremLoremLoremLorem'],
+            },
+            Speaker: 'Jing Shao @ Shanghai AI Lab',
+            institution: 'Shanghai AI Lab',
+            logoSrc: 'schedule1.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T09:10:00+02:00',
+            theme: {
+              title: 'A data-centric view on reliable generalization (30 min)',
+            },
+            Speaker: 'Ludwig Schmit @ University of Washington and Allen Institute for AI',
+            institution: '',
+            logoSrc: 'schedule2.png',
+            link: 'https://people.csail.mit.edu/ludwigs/',
+          },
+          {
+            time: '2024-07-26T09:40:00+02:00',
+            theme: {
+              title: 'Oral Paper Talks (30 min)',
+            },
+            Speaker: ' TBC',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T10:10:00+02:00',
+            theme: {
+              title: 'TBC (30 min)',
+            },
+            Speaker: 'TBC',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T10:40:00+02:00',
+            theme: {
+              title: 'Break (20 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T11:00:00+02:00',
+            theme: {
+              title: 'TBC (30 min)',
+            },
+            Speaker: 'Matt Fredrikson @ CMU',
+            institution: '',
+            logoSrc: 'schedule3.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T11:30:00+02:00',
+            theme: {
+              title: 'Panel Discussion 1 (40 min)',
+            },
+            Speaker: 'TBC',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T12:10:00+02:00',
+            theme: {
+              title: 'Poster Session + Lunch Break (100 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T13:50:00+02:00',
+            theme: {
+              title: 'Agent Governance (30 min)',
+            },
+            Speaker: ' Alan Chan @ Center for the Governance of AI / Mila',
+            institution: '',
+            logoSrc: 'schedule4.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T14:20:00+02:00',
+            theme: {
+              title: 'TBC (30 min)',
+            },
+            Speaker: 'Member of Technical Staff @ UK AI Safety Institute',
+            institution: '',
+            logoSrc: 'schedule5.png',
+            link: '',
+          },
+          {
+            time: '2024-07-26T14:50:00+02:00',
+            theme: {
+              title: 'TBC (40 min)',
+            },
+            Speaker: 'Daniel Paleka (ETH Zurich)',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T15:30:00+02:00',
+            theme: {
+              title: 'Break (20 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-07-26T15:50:00+02:00',
+            theme: {
+              title: 'TBC (30 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-05-15T16:20:00+02:00',
+            theme: {
+              title: 'TBC (15 min)',
+            },
+            Speaker: 'Yisen Wang @ Peking University',
+            institution: '',
+            logoSrc: 'schedule6.png',
+            link: '',
+          },
+          {
+            time: '2024-05-15T16:35:00+02:00',
+            theme: {
+              title: 'TiFA Challenge Takeaways (20 min)',
+            },
+            Speaker: 'Lijun Li @ Shanghai AI Lab',
+            institution: '',
+            logoSrc: 'schedule1.png',
+            link: '',
+          },
+          {
+            time: '2024-05-15T16:55:00+02:00',
+            theme: {
+              title: 'Closing (5 min)',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+          {
+            time: '2024-05-15T17:00:00+02:00',
+            theme: {
+              title: 'End of Program',
+            },
+            Speaker: '',
+            institution: '',
+            logoSrc: '',
+            link: '',
+          },
+        ]}
+      />
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <Content id="Call-For-Papers">
     <Fragment slot="title">Description/Call for Papers</Fragment>
