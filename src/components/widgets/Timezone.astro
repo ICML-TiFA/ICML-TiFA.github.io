@@ -60,16 +60,16 @@ function replaceNewLines(title) {
                   Time
                 </th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Speaker
+                  Session
                 </th>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Theme
+                  Speaker
                 </th>
                 <!-- <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Content
                 </th> -->
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Duration
+                  Duration(mins)
                 </th>
               </tr>
             </thead>
@@ -85,18 +85,13 @@ function replaceNewLines(title) {
                         const month = date.toLocaleString('en-US', { month: 'short' });
                         const day = String(date.getDate()).padStart(2, '0');
                         const dateString = `${month} ${day}, ${hours}:${minutes}`;
+                        const dateString2 = `${hours}:${minutes}`;
                         return (
                           <div class="currentTime" data-date={date}>
                             {dateString}
                           </div>
                         );
                       }}
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      <div class="flex gap-2">
-                        <Image src={item.logoSrc} alt={'post.title'} width={24} height={24} />
-                        {item.Speaker}
-                      </div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <div class="font-bold" set:html={replaceNewLines(item.theme.title)} />
@@ -108,10 +103,16 @@ function replaceNewLines(title) {
                           Link
                         </Button>
                       </td> */}
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <div class="flex gap-2">
+                        <Image src={item.logoSrc} alt={'post.title'} width={24} height={24} />
+                        <div set:html={replaceNewLines(item.Speaker)}></div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {item.duration}
                       </td>
-                    </td>
                   </tr>
                 ))
               }
