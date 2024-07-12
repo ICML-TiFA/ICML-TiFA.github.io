@@ -68,6 +68,9 @@ function replaceNewLines(title) {
                 <!-- <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Content
                 </th> -->
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Duration
+                </th>
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
@@ -105,6 +108,9 @@ function replaceNewLines(title) {
                           Link
                         </Button>
                       </td> */}
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {item.duration}
+                      </td>
                     </td>
                   </tr>
                 ))
